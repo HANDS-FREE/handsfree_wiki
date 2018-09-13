@@ -1,0 +1,1524 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>和Turtlebot的对比 · HandsFree Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="Robocoder">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-latex-codecogs/latex-codecogs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Tutorial/" />
+    
+    
+    <link rel="prev" href="RTMapper.html" />
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    
+        <link rel="shortcut icon" href='../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"HANDS-FREE/handsfree_wiki","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.zonewander.com" target="_blank" class="custom-link">官方网站</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../contribute.html">
+            
+                <a href="../../contribute.html">
+            
+                    
+                    贡献文章
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    综合介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../About/">
+            
+                <a href="../About/">
+            
+                    
+                    关于
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../About/Project-Overview.html">
+            
+                <a href="../About/Project-Overview.html">
+            
+                    
+                    项目介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../About/About-US.html">
+            
+                <a href="../About/About-US.html">
+            
+                    
+                    关于我们
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../About/Why-HandsFree.html">
+            
+                <a href="../About/Why-HandsFree.html">
+            
+                    
+                    为什么要有HandsFree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../About/Story-And-Wine.html">
+            
+                <a href="../About/Story-And-Wine.html">
+            
+                    
+                    故事和酒
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    产品介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Mini.html">
+            
+                <a href="Mini.html">
+            
+                    
+                    Mini机器人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Stone.html">
+            
+                <a href="Stone.html">
+            
+                    
+                    Stone机器人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="Giraffe.html">
+            
+                <a href="Giraffe.html">
+            
+                    
+                    Giraffe机器人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="RTMapper.html">
+            
+                <a href="RTMapper.html">
+            
+                    
+                    RTMapper无人机系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="Comparison.html">
+            
+                <a href="Comparison.html">
+            
+                    
+                    和Turtlebot的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/">
+            
+                    
+                    初级教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Tutorial/1.1-Getting-Started.html">
+            
+                <a href="../Tutorial/1.1-Getting-Started.html">
+            
+                    
+                    准备开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Tutorial/1.2-First-Experiment.html">
+            
+                <a href="../Tutorial/1.2-First-Experiment.html">
+            
+                    
+                    远程遥控机器人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Tutorial/2.1-Mapping.html">
+            
+                <a href="../Tutorial/2.1-Mapping.html">
+            
+                    
+                    雷达建图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Tutorial/2.1-Navigation.html">
+            
+                <a href="../Tutorial/2.1-Navigation.html">
+            
+                    
+                    自主导航
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Tutorial/2.2-RGBD-Test.html">
+            
+                <a href="../Tutorial/2.2-RGBD-Test.html">
+            
+                    
+                    RGBD摄像头实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Tutorial/2.3-Vision-Test.html">
+            
+                <a href="../Tutorial/2.3-Vision-Test.html">
+            
+                    
+                    视觉实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Tutorial/2.4-Head-Tracking.html">
+            
+                <a href="../Tutorial/2.4-Head-Tracking.html">
+            
+                    
+                    云台跟踪实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Tutorial/3.1-Simulation.html">
+            
+                <a href="../Tutorial/3.1-Simulation.html">
+            
+                    
+                    仿真实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Tutorial/RGBDSLAMV2.html">
+            
+                <a href="../Tutorial/RGBDSLAMV2.html">
+            
+                    
+                    RGBDSLAM v2实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Tutorial/ORBSLAM2.html">
+            
+                <a href="../Tutorial/ORBSLAM2.html">
+            
+                    
+                    ORB_SLAM2 实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Tutorial/Advanced/">
+            
+                <a href="../Tutorial/Advanced/">
+            
+                    
+                    进阶教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Tutorial/Advanced/Behavior-Tree/">
+            
+                <a href="../Tutorial/Advanced/Behavior-Tree/">
+            
+                    
+                    行为树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Tutorial/Advanced/Object-Recognition/">
+            
+                <a href="../Tutorial/Advanced/Object-Recognition/">
+            
+                    
+                    目标识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Tutorial/Advanced/Person-Follower/">
+            
+                <a href="../Tutorial/Advanced/Person-Follower/">
+            
+                    
+                    人体跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Tutorial/Advanced/Object-Pick-Place/">
+            
+                <a href="../Tutorial/Advanced/Object-Pick-Place/">
+            
+                    
+                    目标抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Tutorial/Advanced/Multi-Robot/">
+            
+                <a href="../Tutorial/Advanced/Multi-Robot/">
+            
+                    
+                    多机器人
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../OpenRE/">
+            
+                <a href="../OpenRE/">
+            
+                    
+                    OpenRE教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../OpenRE/Getting-Started.html">
+            
+                <a href="../OpenRE/Getting-Started.html">
+            
+                    
+                    开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../OpenRE/Architecture.html">
+            
+                <a href="../OpenRE/Architecture.html">
+            
+                    
+                    架构介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../OpenRE/Develop.html">
+            
+                <a href="../OpenRE/Develop.html">
+            
+                    
+                    开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../OpenRE/HFLink.html">
+            
+                <a href="../OpenRE/HFLink.html">
+            
+                    
+                    HFLink通信协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Hardware/">
+            
+                <a href="../Hardware/">
+            
+                    
+                    硬件手册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Hardware/Devices-Sensors.html">
+            
+                <a href="../Hardware/Devices-Sensors.html">
+            
+                    
+                    设备和传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Hardware/OpenRE-Board.html">
+            
+                <a href="../Hardware/OpenRE-Board.html">
+            
+                    
+                    主控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Hardware/Power-Manager.html">
+            
+                <a href="../Hardware/Power-Manager.html">
+            
+                    
+                    电源管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Hardware/Module.html">
+            
+                <a href="../Hardware/Module.html">
+            
+                    
+                    电路模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Courses/">
+            
+                <a href="../Courses/">
+            
+                    
+                    附录一:机器人课程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Courses/Robotics-Learning.html">
+            
+                <a href="../Courses/Robotics-Learning.html">
+            
+                    
+                    机器人学习规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../FAQ/">
+            
+                <a href="../FAQ/">
+            
+                    
+                    常见问题解决方法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../FAQ/when-usb-was-broken.html">
+            
+                <a href="../FAQ/when-usb-was-broken.html">
+            
+                    
+                    把电路板USB插坏了怎么办？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../FAQ/when-motor-interface-was-broken.html">
+            
+                <a href="../FAQ/when-motor-interface-was-broken.html">
+            
+                    
+                    把电机接口插坏了怎么办？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../FAQ/how-to-get-IP.html">
+            
+                <a href="../FAQ/how-to-get-IP.html">
+            
+                    
+                    如何获取工控机IP地址？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../FAQ/solution-of-handsfree-hw-error.html">
+            
+                <a href="../FAQ/solution-of-handsfree-hw-error.html">
+            
+                    
+                    handsfree_hw节点出现错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../FAQ/OpenRE-make&make-burn-error.html">
+            
+                <a href="../FAQ/OpenRE-make&make-burn-error.html">
+            
+                    
+                    OpenRE编译和烧录报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../FAQ/reason-for-alarming.html">
+            
+                <a href="../FAQ/reason-for-alarming.html">
+            
+                    
+                    机器人滴滴报警怎么办
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../FAQ/environment_config.html">
+            
+                <a href="../FAQ/environment_config.html">
+            
+                    
+                    如何配置环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../FAQ/how-to-use-mirror.html">
+            
+                <a href="../FAQ/how-to-use-mirror.html">
+            
+                    
+                    HandsFree系统镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >和Turtlebot的对比</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#handsfree&#x4E0E;turtlebot&#x5BF9;&#x6BD4;">1. HandsFree&#x4E0E;Turtlebot&#x5BF9;&#x6BD4;</a></li><ul><li><a href="#&#x53C2;&#x6570;&#x5BF9;&#x6BD4;&#x6C47;&#x603B;">1.1. &#x53C2;&#x6570;&#x5BF9;&#x6BD4;&#x6C47;&#x603B;</a></li><li><a href="#&#x6982;&#x8FF0;">1.2. &#x6982;&#x8FF0;</a></li><ul><li><a href="#handsfree">1.2.1. HandsFree</a></li><li><a href="#turtlebot">1.2.2. Turtlebot</a></li></ul><li><a href="#&#x4EA7;&#x54C1;&#x8BE6;&#x7EC6;&#x5BF9;&#x6BD4;">1.3. &#x4EA7;&#x54C1;&#x8BE6;&#x7EC6;&#x5BF9;&#x6BD4;</a></li><ul><li><a href="#&#x673A;&#x68B0;">1.3.1. &#x673A;&#x68B0;</a></li><li><a href="#&#x4E3B;&#x63A7;&#x5236;&#x5668;">1.3.2. &#x4E3B;&#x63A7;&#x5236;&#x5668;</a></li><li><a href="#&#x7535;&#x6E90;&#x4F9B;&#x7535;&#x65B9;&#x6848;">1.3.3. &#x7535;&#x6E90;&#x4F9B;&#x7535;&#x65B9;&#x6848;</a></li><li><a href="#&#x7535;&#x673A;&#x9A71;&#x52A8;">1.3.4. &#x7535;&#x673A;,&#x9A71;&#x52A8;</a></li><li><a href="#&#x4E0B;&#x4F4D;&#x673A;&#x8F6F;&#x4EF6;">1.3.5. &#x4E0B;&#x4F4D;&#x673A;&#x8F6F;&#x4EF6;</a></li><li><a href="#ros&#x548C;&#x4E0A;&#x4F4D;&#x673A;">1.3.6. ROS&#x548C;&#x4E0A;&#x4F4D;&#x673A;</a></li></ul><li><a href="#&#x9500;&#x552E;&#x53CA;&#x670D;&#x52A1;&#x5BF9;&#x6BD4;">1.4. &#x9500;&#x552E;&#x53CA;&#x670D;&#x52A1;&#x5BF9;&#x6BD4;</a></li><ul><li><a href="#&#x4EF7;&#x683C;">1.4.1. &#x4EF7;&#x683C;</a></li><li><a href="#&#x6559;&#x7A0B;">1.4.2. &#x6559;&#x7A0B;</a></li><li><a href="#&#x5176;&#x4ED6;">1.4.3. &#x5176;&#x4ED6;</a></li></ul><li><a href="#&#x603B;&#x7ED3;">1.5. &#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#handsfree&#x4E0E;turtlebot&#x5BF9;&#x6BD4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="handsfree&#x4E0E;turtlebot&#x5BF9;&#x6BD4;"><a name="handsfree&#x4E0E;turtlebot&#x5BF9;&#x6BD4;" class="anchor-navigation-ex-anchor" href="#handsfree&#x4E0E;turtlebot&#x5BF9;&#x6BD4;"><i class="fa fa-link" aria-hidden="true"></i></a>1. HandsFree&#x4E0E;Turtlebot&#x5BF9;&#x6BD4;</h1>
+<h2 id="&#x53C2;&#x6570;&#x5BF9;&#x6BD4;&#x6C47;&#x603B;"><a name="&#x53C2;&#x6570;&#x5BF9;&#x6BD4;&#x6C47;&#x603B;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#x5BF9;&#x6BD4;&#x6C47;&#x603B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x53C2;&#x6570;&#x5BF9;&#x6BD4;&#x6C47;&#x603B;</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">Mini</th>
+<th style="text-align:center">Stone</th>
+<th style="text-align:center">Giraffe</th>
+<th style="text-align:center">Turtlebot2</th>
+<th style="text-align:center">Burger</th>
+<th style="text-align:center">Waffle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&#x9AD8;&#x5EA6;(mm)</td>
+<td style="text-align:center">320</td>
+<td style="text-align:center">1081</td>
+<td style="text-align:center">1502</td>
+<td style="text-align:center">124.8</td>
+<td style="text-align:center">192</td>
+<td style="text-align:center">141</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x76F4;&#x5F84;(mm)</td>
+<td style="text-align:center">230</td>
+<td style="text-align:center">400</td>
+<td style="text-align:center">441/399</td>
+<td style="text-align:center">351.5</td>
+<td style="text-align:center">140/180</td>
+<td style="text-align:center">280/306</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x91CD;&#x91CF;(kg)</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1.8</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x8D1F;&#x8F7D;&#x80FD;&#x529B;(kg)</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">65</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">30</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x6700;&#x5927;&#x901F;&#x5EA6;(m/s)</td>
+<td style="text-align:center">1.2</td>
+<td style="text-align:center">1.2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0.7</td>
+<td style="text-align:center">0.22</td>
+<td style="text-align:center">0.26</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x4E3B;&#x63A7;&#x677F;&#x7C7B;&#x578B;</td>
+<td style="text-align:center">&#x73A9;&#x5BB6;&#x7EA7;&#x4E3B;&#x63A7;</td>
+<td style="text-align:center">&#x4E13;&#x4E1A;&#x7EA7;&#x4E3B;&#x63A7;<br>(&#x4E30;&#x5BCC;&#x7684;&#x63A5;&#x53E3;&#x548C;&#x8D44;&#x6E90;) &#x3000;</td>
+<td style="text-align:center">&#x540C;&#x5DE6;</td>
+<td style="text-align:center">Kobuki&#x5E95;&#x76D8;</td>
+<td style="text-align:center">&#x73A9;&#x5BB6;&#x7EA7;&#x4E3B;&#x63A7;</td>
+<td style="text-align:center">&#x73A9;&#x5BB6;&#x7EA7;&#x4E3B;&#x63A7;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x662F;&#x5426;&#x6DB5;&#x76D6;&#x7535;&#x6E90;&#x7BA1;&#x7406;</td>
+<td style="text-align:center">&#x6709;</td>
+<td style="text-align:center">&#x6709;</td>
+<td style="text-align:center">&#x6709;</td>
+<td style="text-align:center">&#x672A;&#x77E5;</td>
+<td style="text-align:center">&#x65E0;</td>
+<td style="text-align:center">&#x65E0;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x7535;&#x6E90;&#x6269;&#x5C55;</td>
+<td style="text-align:center">12V/3A x 2 , USB5V/2A x 2</td>
+<td style="text-align:center">19V/3A x 3 , 12V/10A x 5 <br> 12V/3A x 4 , USB5V/2A x 2 <br> &#x4E00;&#x8DEF;&#x6025;&#x505C;12V/10A</td>
+<td style="text-align:center">24V/30A x 5 , 19V/3A x 3 <br> 12V/3A x 4 , USB5V/2A x 2  <br> &#x4E00;&#x8DEF;&#x6025;&#x505C;12V/30A</td>
+<td style="text-align:center">12V/5A 12V/1.5A <br> 5V/1A</td>
+<td style="text-align:center">3.3V/0.8A 5V/4A <br> 12V/1A</td>
+<td style="text-align:center">3.3V/0.8A 5V/4A <br> 12V/1A</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x652F;&#x6301;&#x5916;&#x63A5;&#x8BBE;&#x5907;</td>
+<td style="text-align:center">RplidarA1/A2 <br> Hokuyo URG-04L/UTM-30Lx <br> Xtion1/2&#xFF0C;Kinect1/2 <br> TK1&#xFF0C;&#x6811;&#x8393;&#x6D3E;&#xFF0C;&#x5DE5;&#x63A7;&#x673A;</td>
+<td style="text-align:center">Mini&#x652F;&#x6301;&#x7684;&#x8BBE;&#x5907;  <br> + ZED Camera , Dobot&#x673A;&#x68B0;&#x81C2; 1/2</td>
+<td style="text-align:center">Stone&#x652F;&#x6301;&#x7684;&#x8BBE;&#x5907;  <br> + HandsFree&#x673A;&#x68B0;&#x81C2;</td>
+<td style="text-align:center">&#x53C2;&#x8003;&#x4E0A;&#x8FF0;&#x7535;&#x6E90;&#x63A5;&#x53E3;</td>
+<td style="text-align:center">&#x53C2;&#x8003;&#x4E0A;&#x8FF0;&#x7535;&#x6E90;&#x63A5;&#x53E3;</td>
+<td style="text-align:center">&#x53C2;&#x8003;&#x4E0A;&#x8FF0;&#x7535;&#x6E90;&#x63A5;&#x53E3;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x7535;&#x6E90;&#x7535;&#x538B;&#x548C;&#x5BB9;&#x91CF;&#x3000;</td>
+<td style="text-align:center">12v/5200mAh</td>
+<td style="text-align:center">12V 16000mAh</td>
+<td style="text-align:center">24V 20000mAh</td>
+<td style="text-align:center">12v/2200mAh&#x3000;<br>&#x3000;/4400mAh</td>
+<td style="text-align:center">12v/1800mAh</td>
+<td style="text-align:center">12v/1800mAh</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x7EED;&#x822A;&#x65F6;&#x95F4;&#xFF08;h&#xFF09;</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">?</td>
+<td style="text-align:center">2.5</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x673A;&#x578B;&#x7EA7;&#x522B;</td>
+<td style="text-align:center">&#x4F4E;&#x7AEF;</td>
+<td style="text-align:center">&#x4E2D;&#x7AEF;</td>
+<td style="text-align:center">&#x9AD8;&#x7AEF;</td>
+<td style="text-align:center">&#x4E2D;&#x7AEF;</td>
+<td style="text-align:center">&#x4F4E;&#x7AEF;</td>
+<td style="text-align:center">&#x4F4E;&#x7AEF;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x6559;&#x7A0B;&#x4F53;&#x7CFB;</td>
+<td style="text-align:center">&#x3000; &#x6709;</td>
+<td style="text-align:center">&#x6709;</td>
+<td style="text-align:center">&#x6709;</td>
+<td style="text-align:center">&#x6709;</td>
+<td style="text-align:center">&#x6709;</td>
+<td style="text-align:center">&#x6709;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x4E0B;&#x4F4D;&#x673A;&#x8F6F;&#x4EF6;</td>
+<td style="text-align:center">&#x4E13;&#x4E1A;&#x673A;&#x5668;&#x4EBA;&#x5E93;OpenRE</td>
+<td style="text-align:center">&#x540C;&#x5DE6;</td>
+<td style="text-align:center">&#x540C;&#x5DE6;</td>
+<td style="text-align:center">&#x672A;&#x77E5;</td>
+<td style="text-align:center">OpenCR</td>
+<td style="text-align:center">&#x540C;&#x5DE6;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x4EF7;&#x683C;(RMB)</td>
+<td style="text-align:center">1998/3598<br>4398/5398</td>
+<td style="text-align:center">5998/8598/10398<br>12398/15398</td>
+<td style="text-align:center">12998/20998<br>24598/66998</td>
+<td style="text-align:center">11399</td>
+<td style="text-align:center">5500</td>
+<td style="text-align:center">15500</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8BF4;&#x660E;:</p>
+<ul>
+<li>Turtlebot2&#x9664;&#x4EF7;&#x683C;&#x5916;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x5747;&#x4E3A;Kobuki&#x79FB;&#x52A8;&#x5E95;&#x76D8;&#x7684;&#x53C2;&#x6570;.</li>
+<li>Burger&#x548C;Waffle&#x662F;Turtlebot3&#x7CFB;&#x5217;&#x5E73;&#x53F0;</li>
+<li>&#x4EF7;&#x683C;&#x4E00;&#x680F;&#x683C;&#x5F0F;&#x4E0D;&#x540C;&#x7684;&#x7248;&#x672C;</li>
+<li>&#x76F4;&#x5F84;&#x4E3A;:&#x957F;,&#x5BBD;</li>
+</ul>
+<hr>
+<p>&#x672C;&#x6587;&#x6863;&#x4E3A;HandsFree&#x673A;&#x5668;&#x4EBA;&#x4E0E;Turtlebot&#x516C;&#x53F8;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x5BF9;&#x6BD4;&#x62A5;&#x544A;,.&#x62A5;&#x544A;&#x5185;&#x5BB9;&#x5C06;&#x4ECE;<strong>&#x786C;&#x4EF6;</strong>,<strong>&#x8F6F;&#x4EF6;</strong>,<strong>&#x552E;&#x540E;</strong>&#x4E09;&#x4E2A;&#x65B9;&#x9762;&#x6765;&#x8FDB;&#x884C;&#x5BF9;&#x6BD4;.</p>
+<h2 id="&#x6982;&#x8FF0;"><a name="&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x6982;&#x8FF0;</h2>
+<h3 id="handsfree"><a name="handsfree" class="anchor-navigation-ex-anchor" href="#handsfree"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. HandsFree</h3>
+<blockquote>
+<p>HandsFree &#x662F;&#x4E00;&#x4E2A;&#x9762;&#x5411;&#x673A;&#x5668;&#x4EBA;&#x7814;&#x7A76;&#x3001;&#x5F00;&#x53D1;&#x7684;&#x5F00;&#x6E90;&#x8F6F;&#x786C;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;&#x6709;&#x5B8C;&#x5907;&#x4E0E;&#x79D1;&#x5B66;&#x7684;&#x6846;&#x67B6;,&#x4EE5;&#x4F18;&#x79C0;&#x7684;&#x5D4C;&#x5165;&#x5F0F;&#x7CFB;&#x7EDF;&#x6846;&#x67B6;&#x4E3A;&#x6838;&#x5FC3;,&#x7CBE;&#x826F;&#x7684;&#x7535;&#x8DEF;&#x3001;&#x673A;&#x68B0;&#x8BBE;&#x8BA1;&#x4E3A;&#x652F;&#x6491;,&#x5E2E;&#x60A8;&#x5FEB;&#x901F;&#x5B9E;&#x73B0;&#x591A;&#x79CD;&#x5F62;&#x6001;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x3002;&#x672C;&#x7CFB;&#x7EDF;&#x5305;&#x542B;&#x673A;&#x5668;&#x4EBA;&#x5BFC;&#x822A;,SLAM,&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;&#x7B49;&#x6A21;&#x5757;,&#x5E76;&#x62E5;&#x6709;&#x81EA;&#x5DF1;&#x4E0A;&#x5C42;&#x8F6F;&#x4EF6;&#x548C;&#x8C03;&#x8BD5;&#x7CFB;&#x7EDF;&#x3002;&#x5979;&#x652F;&#x6301;&#x56FD;&#x5916;&#x5176;&#x4ED6;&#x7684;&#x5F00;&#x6E90;&#x9879;&#x76EE;,&#x5982; ROS, MPRT, PIXHAWK &#x7B49;,&#x8FD9;&#x4E00;&#x5207;&#x90FD;&#x4E3A;&#x60A8;&#x5E26;&#x6765;&#x4E86;&#x65E0;&#x6BD4;&#x7684;&#x4FBF;&#x6377;&#x548C;&#x5FEB;&#x4E50;!    </p>
+</blockquote>
+<p> HandsFree&#x73B0;&#x5728;&#x4E3B;&#x63A8;&#x4E09;&#x6B3E;&#x673A;&#x5668;&#x4EBA;&#x5206;&#x522B;&#x662F;Mini,Stone,Giraffe,&#x5206;&#x522B;&#x9762;&#x5411;&#x4E0D;&#x540C;&#x9700;&#x6C42;.&#x7B80;&#x4ECB;&#x5982;&#x4E0B;:<br><a href="Mini.html">Mini</a>&#x662F;&#x4E00;&#x6B3E;&#x91C7;&#x7528;&#x524D;&#x4E07;&#x5411;&#x540E;&#x53CC;&#x9A71;&#x52A8;&#x8F6E;&#x5E95;&#x76D8;&#x5E03;&#x5C40;&#x7684;&#x5C0F;&#x578B;&#x673A;&#x5668;&#x4EBA;&#x3002;&#x5176;&#x6574;&#x673A;&#x7ED3;&#x6784;&#x91C7;&#x7528;&#x5E73;&#x677F;&#x6841;&#x67B6;&#x5F0F;&#x900F;&#x660E;&#x5316;&#x8BBE;&#x8BA1;&#xFF0C;&#x5916;&#x5F62;&#x7B80;&#x7EA6;&#x5927;&#x65B9;&#xFF0C;&#x80FD;&#x652F;&#x6301;&#x591A;&#x79CD;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#xFF0C;TK1&#x3001;&#x6811;&#x8393;&#x6D3E;&#x7B49;&#x4E3B;&#x6D41;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x53EF;&#x642D;&#x8F7D;assustion&#x3001;Kinect1 &#x3001;Kinect2&#x7B49;&#x6DF1;&#x5EA6;&#x6444;&#x50CF;&#x5934;&#x3002;Mini&#x4F53;&#x578B;&#x5C0F;&#x3001;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x3001;&#x6027;&#x4EF7;&#x6BD4;&#x9AD8;&#xFF0C;&#x975E;&#x5E38;&#x9002;&#x5408;&#x5165;&#x95E8;&#x8005;&#x5F00;&#x53D1;&#x7814;&#x7A76;&#x548C;&#x591A;&#x673A;&#x96C6;&#x7FA4;&#x5E94;&#x7528;&#x7814;&#x7A76;&#x3002;&#x6548;&#x679C;&#x5982;&#x56FE;:</p>
+<p><img src="../../images/Products/Mini/Mini_V2_Resource.jpg" alt="Alt text"></p>
+<p><a href="Stone.html">Stone</a>&#x662F;&#x4E00;&#x6B3E;&#x91C7;&#x7528;&#x524D;&#x4E07;&#x5411;&#x540E;&#x53CC;&#x9A71;&#x52A8;&#x8F6E;&#x5E95;&#x76D8;&#x5E03;&#x5C40;&#x7684;&#x667A;&#x80FD;&#x8F66;&#x5E73;&#x53F0;&#x3002;&#x5176;&#x6574;&#x673A;&#x7ED3;&#x6784;&#x91C7;&#x7528;&#x5E73;&#x677F;&#x6841;&#x67B6;&#x5F0F;&#x900F;&#x660E;&#x5316;&#x8BBE;&#x8BA1;&#xFF0C;&#x5916;&#x5F62;&#x7B80;&#x5355;&#x53C8;&#x4E0D;&#x5931;&#x673A;&#x68B0;&#x7F8E;&#x611F;&#x3002;Stone&#x53EF;&#x642D;&#x8F7D;Dobot1&#x3001;Dobot m1&#x7B49;&#x5C0F;&#x578B;&#x673A;&#x68B0;&#x81C2;&#xFF0C;&#x80FD;&#x652F;&#x6301;&#x591A;&#x79CD;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#xFF0C;TX1&#x3001;TK1&#x3001;&#x6811;&#x8393;&#x6D3E;&#x7B49;&#x4E3B;&#x6D41;&#x63A7;&#x5236;&#x5668;&#x3002;&#x5176;&#x914D;&#x5907;&#x9AD8;&#x5EA6;&#x53EF;&#x8C03;&#x7684;&#x4E24;&#x8F74;&#x4E91;&#x53F0;&#xFF0C;&#x517C;&#x5BB9;&#x591A;&#x6B3E;RGBD&#x6444;&#x50CF;&#x5934;&#x548C;&#x5355;&#x3001;&#x53CC;&#x76EE;&#x6444;&#x50CF;&#x5934;&#x3002;&#x6548;&#x679C;&#x5982;&#x56FE;: </p>
+<p><img src="../../images/Products/Stone/Stone_V3_Resource.jpg" alt="Alt text"></p>
+<p><a href="Giraffe.html">Giraffe</a>&#x662F;&#x4E00;&#x6B3E;&#x91C7;&#x7528;&#x524D;&#x4E07;&#x5411;&#x540E;&#x53CC;&#x9A71;&#x52A8;&#x8F6E;&#x5E95;&#x76D8;&#x5E03;&#x5C40;&#x7684;&#x667A;&#x80FD;&#x8F66;&#x5E73;&#x53F0;&#x3002;&#x5176;&#x6574;&#x673A;&#x7ED3;&#x6784;&#x91C7;&#x7528;&#x5E73;&#x677F;&#x6841;&#x67B6;&#x5F0F;&#x5C01;&#x95ED;&#x5F0F;&#x8BBE;&#x8BA1;&#xFF1B;&#x4FA7;&#x677F;&#x91C7;&#x7528;&#x5E26;&#x78C1;&#x5438;&#x53EF;&#x5F00;&#x5408;&#x8BBE;&#x8BA1;&#xFF1B;&#x4F20;&#x52A8;&#x7CFB;&#x7EDF;&#x91C7;&#x7528;&#x540C;&#x6B65;&#x5E26;&#x4F20;&#x52A8;&#x3002;Giraffe&#x53EF;&#x540C;&#x65F6;&#x652F;&#x6301;&#x4E00;&#x524D;&#x4E00;&#x540E;&#x4E24;&#x4E2A;&#x6FC0;&#x5149;&#x96F7;&#x8FBE;&#xFF0C;&#x517C;&#x5BB9;TX1&#x3001;TK1&#x3001;&#x6811;&#x8393;&#x6D3E;&#x7B49;&#x4E3B;&#x6D41;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x914D;&#x5907;&#x9AD8;&#x5EA6;&#x53EF;&#x8C03;&#x3001;&#x80FD;&#x517C;&#x5BB9;&#x591A;&#x6B3E;RGBD&#x6444;&#x50CF;&#x5934;&#x548C;&#x5355;&#x3001;&#x53CC;&#x76EE;&#x6444;&#x50CF;&#x5934;&#x7684;&#x4E24;&#x8F74;&#x4E91;&#x53F0;&#x3002;Giraffe&#x53EF;&#x642D;&#x8F7D;HandsFree&#x4E2D;&#x578B;&#x673A;&#x68B0;&#x81C2;&#xFF08;&#x91CD;&#x91CF;15Kg&#x5DE6;&#x53F3;&#xFF09;&#xFF0C;&#x5177;&#x6709;&#x9AD8;&#x8FBE;65Kg&#x7684;&#x627F;&#x8F7D;&#x80FD;&#x529B;&#x3002;&#x6548;&#x679C;&#x5982;&#x56FE;:</p>
+<p><img src="../../images/Products/Giraffe/Giraffe_V3_Resource.jpg" alt="Alt text"></p>
+<h3 id="turtlebot"><a name="turtlebot" class="anchor-navigation-ex-anchor" href="#turtlebot"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. Turtlebot</h3>
+<p>&#x82F1;&#x6587;&#x662F;&#x4ECB;&#x7ECD;&#x7684;&#x539F;&#x6587;,&#x4E2D;&#x6587;&#x4E0B;&#x9762;&#x4E2D;&#x6587;&#x8FDB;&#x884C;&#x4E86;&#x7B80;&#x8981;&#x7684;&#x7FFB;&#x8BD1;   </p>
+<blockquote>
+<p>TurtleBot is a low-cost, personal robot kit with open-source software. TurtleBot was created at Willow Garage by Melonee Wise and Tully Foote in November 2010. With TurtleBot, you&#x2019;ll be able to build a robot that can drive around your house, see in 3D, and have enough horsepower to create exciting applications.<br>The TurtleBot kit consists of a mobile base, 2D/3D distance sensor, laptop computer or SBC(Single Board Computer), and the TurtleBot mounting hardware kit. In addition to the TurtleBot kit, users can download the TurtleBot SDK from the ROS wiki. TurtleBot is designed to be easy to buy, build, and assemble, using off the shelf consumer products and parts that easily can be created from standard materials. As an entry level mobile robotics platform, TurtleBot has many of the same capabilities of the company&#x2019;s larger robotics platforms, like PR2.<br>Turtlebot&#x662F;&#x4E00;&#x79CD;&#x4F4E;&#x6210;&#x672C;&#xFF0C;&#x5177;&#x6709;&#x5F00;&#x6E90;&#x5F00;&#x6E90;&#x8F6F;&#x4EF6;&#x7684;&#x4E2A;&#x4EBA;&#x673A;&#x5668;&#x4EBA;&#x5F00;&#x53D1;&#x5957;&#x4EF6;&#x3002;&#x5229;&#x7528;Turtlebot&#xFF0C;&#x4F60;&#x5C06;&#x80FD;&#x591F;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x9A71;&#x52A8;&#x4F60;&#x7684;&#x623F;&#x5B50;&#x5468;&#x56F4;&#x7684;&#x673A;&#x5668;&#x4EBA;&#xFF0C;&#x770B;3D&#x89C6;&#x56FE;&#xFF0C;&#x5E76;&#x6709;&#x8DB3;&#x591F;&#x7684;&#x9A6C;&#x529B;&#xFF0C;&#x5E76;&#x521B;&#x9020;&#x4EE4;&#x4EBA;&#x5174;&#x594B;&#x7684;&#x5E94;&#x7528;&#x3002;<br>Turtlebot&#x5F00;&#x53D1;&#x5957;&#x4EF6;&#x7531;&#x4E00;&#x4E2A;&#x79FB;&#x52A8;&#x5E95;&#x76D8;&#xFF0C;&#x4E8C;&#x7EF4;/&#x4E09;&#x7EF4;&#x8DDD;&#x79BB;&#x4F20;&#x611F;&#x5668;&#x3001;&#x7B14;&#x8BB0;&#x672C;&#x7535;&#x8111;&#x6216;SBC&#xFF08;&#x5355;&#x677F;&#x8BA1;&#x7B97;&#x673A;&#xFF09;&#xFF0C;&#x548C;turtlebot&#x5B89;&#x88C5;&#x786C;&#x4EF6;&#x5957;&#x4EF6;&#x7EC4;&#x6210;&#x3002;&#x8FD8;&#x6709;,&#x5BF9;turtlebot&#x5957;&#x4EF6;&#x6765;&#x8BF4;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4ECE;ROS&#x7684;wiki&#x4E0A;&#x4E0B;&#x8F7D;Turtlebot SDK&#x3002;Turtlebot&#x8BBE;&#x8BA1;&#x6613;&#x4E8E;&#x8D2D;&#x4E70;&#xFF0C;&#x5EFA;&#x9020;&#xFF0C;&#x5B89;&#x88C5;&#xFF0C;&#x4F7F;&#x7528;&#x73B0;&#x6210;&#x7684;&#x6D88;&#x8D39;&#x4EA7;&#x54C1;&#x548C;&#x96F6;&#x4EF6;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x53EF;&#x4EE5;&#x4ECE;&#x6807;&#x51C6;&#x7684;&#x6750;&#x6599;&#x5236;&#x9020;&#x3002;&#x4F5C;&#x4E3A;&#x4E00;&#x6B3E;&#x5165;&#x95E8;&#x7EA7;&#x7684;&#x79FB;&#x52A8;&#x673A;&#x5668;&#x4EBA;&#x5E73;&#x53F0;&#xFF0C;Turtlebot&#x6709;&#x8BB8;&#x591A;&#x7684;&#x516C;&#x53F8;&#x66F4;&#x5927;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x5E73;&#x53F0;&#x76F8;&#x540C;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6BD4;&#x5982;PR2&#x673A;&#x5668;&#x4EBA;&#x3002;   </p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x673A;&#x5668;&#x4EBA;,Turtlebot&#x73B0;&#x5B58;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x6709;&#x7B2C;&#x4E8C;&#x4EE3;&#x548C;&#x7B2C;&#x4E09;&#x4EE3;&#x7684;&#x673A;&#x5668;&#x4EBA;,&#x8FD9;&#x4E24;&#x4EE3;&#x673A;&#x5668;&#x4EBA;&#x5DEE;&#x522B;&#x6BD4;&#x8F83;&#x5927;.<br><a href="http://www.turtlebot.com/turtlebot2/" target="_blank">Turtlebot2</a>&#x662F;&#x4E00;&#x4E2A;&#x7CFB;&#x5217;,&#x5927;&#x90E8;&#x5206;&#x90FD;&#x662F;&#x7531;Kobuki&#x79FB;&#x52A8;&#x5E95;&#x76D8;,&#x534E;&#x7855;&#x7684;Xtion&#x6DF1;&#x5EA6;&#x6444;&#x50CF;&#x5934;/kinect&#x6DF1;&#x5EA6;&#x6444;&#x50CF;&#x5934;,&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x4E0A;&#x7F51;&#x7684;&#x7B14;&#x8BB0;&#x672C;,&#x8FD8;&#x6709;&#x653E;&#x7F6E;&#x7B14;&#x8BB0;&#x672C;&#x548C;kinect&#x7684;&#x5404;&#x79CD;&#x7ED3;&#x6784;,&#x673A;&#x5668;&#x4EBA;.&#x673A;&#x5668;&#x4EBA;&#x4E3B;&#x8981;&#x7684;&#x90E8;&#x5206;&#x5C31;&#x662F;kobuki&#x79FB;&#x52A8;&#x5E95;&#x76D8;,&#x6444;&#x50CF;&#x5934;&#x548C;&#x53EF;&#x8054;&#x7F51;&#x7684;PC.&#x4F46;&#x662F;&#x7B2C;&#x4E8C;&#x4EE3;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x79FB;&#x52A8;&#x5E95;&#x76D8;&#x662F;&#x5C01;&#x88C5;&#x597D;&#x4E86;&#x7684;,&#x5185;&#x90E8;&#x673A;&#x68B0;&#x53CA;&#x8F6F;&#x4EF6;&#x5747;&#x662F;&#x4E0D;&#x5F00;&#x6E90;&#x7684;,&#x53EA;&#x7559;&#x4E0B;&#x4E86;&#x66F4;&#x65B0;&#x56FA;&#x4EF6;&#x63A5;&#x53E3;&#x53CA;&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x63A5;&#x53E3;.&#x56E0;&#x4E3A;&#x4E0D;&#x5F00;&#x6E90;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x66F4;&#x591A;&#x7684;&#x5206;&#x6790;,&#x4F46;&#x4E0D;&#x53EF;&#x5426;&#x8BA4;&#x7684;&#x662F;,&#x8FD9;&#x4E2A;&#x79FB;&#x52A8;&#x5E95;&#x76D8;&#x786E;&#x5B9E;&#x6BD4;&#x8F83;&#x7A33;&#x5B9A;&#x548C;&#x51C6;&#x786E;.&#x6548;&#x679C;&#x5982;&#x56FE;:</p>
+<p><img src="../../images/Products/Comparison/turtlebot2.png" alt="Turtlebot2"></p>
+<p><a href="http://turtlebot3.robotis.com/en/latest/" target="_blank">Turtlebot3</a>&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x7CFB;&#x5217;,&#x73B0;&#x5728;&#x4E3B;&#x8981;&#x7684;&#x4E24;&#x6B3E;&#x662F;Burger&#x548C;Waffle.&#x4E3B;&#x8981;&#x7531;&#x6811;&#x8393;&#x6D3E;,&#x4E00;&#x5757;STM32F&#xFF17;&#x7535;&#x8DEF;&#x677F;,&#x8FD8;&#x6709;&#x96F7;&#x8FBE;&#x7EC4;&#x6210;.&#x6709;&#x4EBA;&#x5C1D;&#x8BD5;&#x5728;&#x4E0A;&#x9762;&#x52A0;&#x88C5;&#x6DF1;&#x5EA6;&#x6444;&#x50CF;&#x5934;&#x548C;&#x673A;&#x68B0;&#x81C2;,&#x4F46;&#x662F;&#x611F;&#x89C9;&#x4E5F;&#x53EA;&#x662F;&#x88C5;&#x9970;,&#x7531;&#x4E8E;&#x9AD8;&#x5EA6;&#x7684;&#x9650;&#x5236;,&#x53EA;&#x6709;&#x96F7;&#x8FBE;&#x80FD;&#x591F;&#x53D1;&#x6325;&#x51FA;&#x5168;&#x90E8;&#x7684;&#x4F5C;&#x7528;.&#x7B2C;&#x4E09;&#x4EE3;&#x673A;&#x5668;&#x4EBA;&#x548C;&#x7B2C;&#x4E8C;&#x4EE3;&#x673A;&#x5668;&#x4EBA;&#x6765;&#x6BD4;&#x8F83;&#x7684;&#x8BDD;,&#x53D8;&#x5316;&#x975E;&#x5E38;&#x5927;.(1)&#x66F4;&#x52A0;&#x5730;&#x4F4E;&#x6210;&#x672C;,&#x9009;&#x53D6;&#x7684;&#x786C;&#x4EF6;&#x90FD;&#x5F88;low,&#x6709;&#x70B9;&#x9762;&#x5411;&#x9AD8;&#x4E2D;&#x751F;&#x7684;&#x610F;&#x601D;,&#x5728;&#x4E0A;&#x9762;&#x8BA1;&#x7B97;&#x6015;&#x662F;&#x4E0D;&#x884C;.(2),&#x5168;&#x90E8;&#x5F00;&#x6E90;,&#x7B2C;&#x4E09;&#x4EE3;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x786C;&#x4EF6;&#x8F6F;&#x4EF6;&#x5168;&#x90E8;&#x662F;&#x5F00;&#x6E90;&#x7684;,&#x4E0D;&#x50CF;&#x7B2C;&#x4E8C;&#x4EE3;,&#x79FB;&#x52A8;&#x5E95;&#x76D8;&#x662F;&#x4E00;&#x4E2A;&#x96C6;&#x6210;&#x597D;&#x4E86;&#x7684;&#x4EA7;&#x54C1;.&#x6548;&#x679C;&#x5982;&#x56FE;:</p>
+<p><img src="../../images/Products/Comparison/turtlebot3.png" alt="Turtlebot3"></p>
+<h2 id="&#x4EA7;&#x54C1;&#x8BE6;&#x7EC6;&#x5BF9;&#x6BD4;"><a name="&#x4EA7;&#x54C1;&#x8BE6;&#x7EC6;&#x5BF9;&#x6BD4;" class="anchor-navigation-ex-anchor" href="#&#x4EA7;&#x54C1;&#x8BE6;&#x7EC6;&#x5BF9;&#x6BD4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x4EA7;&#x54C1;&#x8BE6;&#x7EC6;&#x5BF9;&#x6BD4;</h2>
+<p>&#x56E0;&#x4E3A;Turtlebot2&#x5E76;&#x4E0D;&#x662F;&#x5168;&#x90E8;&#x5F00;&#x6E90;,&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5728;&#x5BF9;&#x6BD4;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5C06;&#x6240;&#x77E5;&#x7684;Turtlebot2&#x7684;&#x4FE1;&#x606F;&#x63D0;&#x53CA;,&#x4F46;&#x662F;&#x4E3B;&#x8981;&#x5C06;&#x5BF9;Turtlebot3&#x548C;HandsFree&#x4E3E;&#x4F8B;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;.</p>
+<h3 id="&#x673A;&#x68B0;"><a name="&#x673A;&#x68B0;" class="anchor-navigation-ex-anchor" href="#&#x673A;&#x68B0;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x673A;&#x68B0;</h3>
+<h4 id="&#x53C2;&#x6570;&#x5DEE;&#x5F02;"><a name="&#x53C2;&#x6570;&#x5DEE;&#x5F02;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#x5DEE;&#x5F02;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#x5DEE;&#x5F02;</h4>
+<p>&#x673A;&#x68B0;&#x65B9;&#x9762;,HandsFree&#x6709;&#x4E09;&#x6B3E;&#x673A;&#x5668;&#x4EBA;,&#x5C0F;&#x578B;&#x7684;Mini&#x5230;&#x5927;&#x673A;&#x5668;&#x4EBA;Giraffe,&#x4E0D;&#x540C;&#x89C4;&#x683C;&#x6EE1;&#x8DB3;&#x4E0D;&#x540C;&#x9700;&#x6C42;.Turtlebot&#x65B9;&#x9762;&#x7B2C;&#x4E8C;&#x4EE3;&#x4EA7;&#x54C1;&#x4E0E;&#x6211;&#x4EEC;&#x7684;&#x4E2D;&#x578B;&#x4EA7;&#x54C1;Stone&#x5927;&#x5C0F;&#x7C7B;&#x4F3C;,&#x7B2C;&#x4E09;&#x4EE3;&#x4EA7;&#x54C1;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;&#x7684;&#x4E0D;&#x592A;&#x5408;&#x7406;&#xFF0C;&#x5982;&#x679C;&#x5BA2;&#x6237;&#x4E0D;&#x624B;&#x52A8;&#x52A0;&#x9AD8;&#xFF0C;&#x90A3;&#x4E48;&#x5B9E;&#x9645;&#x7528;&#x8D77;&#x6765;&#x6548;&#x679C;&#x548C;&#x4E0E;Mini&#x7C7B;&#x4F3C;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x5BF9;&#x6BD4;:   </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">Mini</th>
+<th style="text-align:center">Stone</th>
+<th style="text-align:center">Giraffe</th>
+<th style="text-align:center">Turtlebot2</th>
+<th style="text-align:center">Burger</th>
+<th style="text-align:center">Waffle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&#x9AD8;&#x5EA6;(mm)</td>
+<td style="text-align:center">320</td>
+<td style="text-align:center">1081</td>
+<td style="text-align:center">1502</td>
+<td style="text-align:center">124.8</td>
+<td style="text-align:center">192</td>
+<td style="text-align:center">141</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x76F4;&#x5F84;(mm)</td>
+<td style="text-align:center">230</td>
+<td style="text-align:center">400</td>
+<td style="text-align:center">441/399</td>
+<td style="text-align:center">351.5</td>
+<td style="text-align:center">140/180</td>
+<td style="text-align:center">280/306</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x91CD;&#x91CF;(kg)</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1.8</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x8D1F;&#x8F7D;&#x80FD;&#x529B;(kg)</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">65</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">30</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x6700;&#x5927;&#x901F;&#x5EA6;(m/s)</td>
+<td style="text-align:center">1.2</td>
+<td style="text-align:center">1.2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0.7</td>
+<td style="text-align:center">0.22</td>
+<td style="text-align:center">0.26</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8BF4;&#x660E;&#x5206;&#x6790;"><a name="&#x8BF4;&#x660E;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x8BF4;&#x660E;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BF4;&#x660E;&#x5206;&#x6790;</h4>
+<p>&#x673A;&#x68B0;&#x7ED3;&#x6784;&#x6765;&#x8BF4;,HandsFree&#x5360;&#x636E;&#x66F4;&#x591A;&#x4F18;&#x52BF;.   </p>
+<ul>
+<li>&#x9AD8;&#x5EA6;,&#x8981;&#x77E5;&#x9053;,&#x6240;&#x6709;&#x7684;&#x6DF1;&#x5EA6;&#x6444;&#x50CF;&#x5934;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x76F2;&#x533A;,&#x6BD4;&#x5982;&#x8BF4;Xtion2&#x7684;&#x6709;&#x6548;&#x8DDD;&#x79BB;&#x662F;0.8~3.5m,&#x4F46;&#x662F;Turtlebot3&#x9AD8;&#x5EA6;&#x592A;&#x4F4E;,&#x4F1A;&#x6709;&#x5F88;&#x5927;&#x7684;&#x76F2;&#x533A;.HandsFree&#x6BCF;&#x6B3E;&#x673A;&#x5668;&#x4EBA;&#x90FD;&#x6709;&#x67B6;&#x9AD8;&#x4E86;&#x7684;&#x4E91;&#x53F0;,&#x89C6;&#x91CE;&#x66F4;&#x597D;.    </li>
+<li>&#x901F;&#x5EA6;,&#x7531;&#x4E8E;&#x8F83;&#x597D;&#x7684;&#x7A33;&#x5B9A;&#x6027;,HandsFree&#x7684;&#x901F;&#x5EA6;&#x90FD;&#x8981;&#x6BD4;Turtlebot&#x8981;&#x5FEB;   </li>
+<li>&#x627F;&#x8F7D;&#x80FD;&#x529B;&#x65B9;&#x9762;,&#x76F8;&#x5DEE;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x5927;,&#x800C;&#x4E14;&#x5982;&#x679C;&#x662F;&#x52A0;&#x88C5;&#x673A;&#x68B0;&#x81C2;&#x7684;&#x8BDD;,&#x611F;&#x89C9;Turtlebot3&#x5E95;&#x76D8;&#x5B9E;&#x5728;&#x662F;&#x592A;&#x4F4E;&#x4E86;.Handsfree&#x5176;&#x4E2D;&#x4E24;&#x6B3E;&#x90FD;&#x53EF;&#x4EE5;&#x52A0;&#x88C5;&#x673A;&#x68B0;&#x81C2;,&#x4F4D;&#x7F6E;&#x4E5F;&#x6BD4;&#x8F83;&#x5408;&#x9002;.   </li>
+<li>&#x4E91;&#x53F0;,Turtlebot&#x6240;&#x6709;&#x7CFB;&#x5217;&#x90FD;&#x6CA1;&#x6709;&#x4E91;&#x53F0;,&#x800C;HandsFree&#x6240;&#x6709;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x52A0;&#x88C5;&#x4E91;&#x53F0;,&#x53EF;&#x4EE5;&#x4F7F;&#x89C6;&#x91CE;&#x66F4;&#x5E7F;.</li>
+</ul>
+<h3 id="&#x4E3B;&#x63A7;&#x5236;&#x5668;"><a name="&#x4E3B;&#x63A7;&#x5236;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x4E3B;&#x63A7;&#x5236;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. &#x4E3B;&#x63A7;&#x5236;&#x5668;</h3>
+<h4 id="&#x53C2;&#x6570;&#x4ECB;&#x7ECD;"><a name="&#x53C2;&#x6570;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#x4ECB;&#x7ECD;</h4>
+<p>HandsFree&#x4E2D;Mini&#x673A;&#x5668;&#x4EBA;&#x7528;&#x7684;&#x63A7;&#x5236;&#x5668;&#x662F;<a href="../Hardware/OpenRE-Board.html">OpenRE Board Mini</a>,&#x53E6;&#x5916;&#x4E24;&#x6B3E;&#x4F7F;&#x7528;&#x7684;&#x662F;<a href="../Hardware/OpenRE-Board.html">OpenRE Board</a>,&#x8FD9;&#x4E24;&#x6B3E;&#x8F6F;&#x786C;&#x4EF6;&#x5168;&#x90E8;&#x5F00;&#x6E90;.Turtlebot2&#x5E95;&#x76D8;&#x63A7;&#x5236;&#x662F;&#x4E2A;&#x9ED1;&#x7BB1;&#x5B50;,&#x65E2;&#x4E0D;&#x80FD;&#x81EA;&#x5DF1;&#x62D3;&#x5C55;&#x5E94;&#x7528;&#x53C8;&#x4E0D;&#x80FD;&#x81EA;&#x4E3B;&#x5F00;&#x53D1;,&#x5F88;&#x8D5A;&#x94B1;,&#x6BD5;&#x7ADF;&#x4EBA;&#x5BB6;&#x662F;&#x4E13;&#x4E1A;&#x7684;&#x9760;&#x8FD9;&#x4E2A;&#x5403;&#x996D;&#x7684;,&#x505A;&#x51FA;&#x6765;&#x7684;&#x63A7;&#x5236;&#x6548;&#x679C;&#x548C;&#x91CC;&#x7A0B;&#x8BA1;&#x7684;&#x7CBE;&#x786E;&#x5EA6;&#x53EF;&#x80FD;&#x4F1A;&#x6BD4;&#x8F83;&#x9AD8;,&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x53C2;&#x6570;,&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;,&#x4F46;&#x662F;Turtlebot3&#x662F;&#x5168;&#x90E8;&#x5F00;&#x6E90;&#x7684;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x62FF;&#x6765;&#x6BD4;&#x8F83;&#x4E00;&#x4E0B;&#xFF0E;</p>
+<p>&#x4ECE;&#x4E0B;&#x9762;&#x7684;&#x6BD4;&#x8F83;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;Turtlebot3&#x7684;&#x63A7;&#x5236;&#x5668;&#x4E5F;&#x5C31;&#x662F;&#x7528;&#x4E86;&#x4E00;&#x7247;stm32F7&#xFF0C;&#x5176;&#x5B83;&#x7684;&#x6574;&#x4F53;&#x6765;&#x770B;&#xFF0C;&#x677F;&#x5B50;&#x8FD8;&#x662F;&#x633A;&#x4F4E;&#x7AEF;&#x7684;&#xFF0C;&#x63A5;&#x53E3;&#x4E5F;&#x662F;&#x5404;&#x79CD;&#x6392;&#x9488;&#xFF0C;&#x4E0D;&#x9002;&#x5408;&#x4E13;&#x4E1A;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x7CFB;&#x7EDF;&#xFF0C;&#x548C;OpenRE Board&#x6BD4;&#x8D77;&#x6765;&#x8FD8;&#x662F;&#x5DEE;&#x4E86;&#x8BB8;&#x591A;&#xFF0E; </p>
+<p>OpenRE Board &#x4E3B;&#x8981;&#x7279;&#x5F81;:   </p>
+<ul>
+<li>168MHZ STM32F407 Cortex M4   </li>
+<li>&#x677F;&#x8F7D;&#x4E09;&#x8F74;&#x9640;&#x87BA;&#x4EEA;&#xFF0C;&#x4E09;&#x8F74;&#x52A0;&#x901F;&#x8BA1;&#xFF0C;&#x6C14;&#x538B;&#x8BA1;&#xFF0C;&#x4E09;&#x8F74;&#x78C1;&#x529B;&#x8BA1;&#x3002;   </li>
+<li>10PWM&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x3002;   </li>
+<li>USBTTL, USB&#xFF0C;microSD&#x5361;&#x3002;   </li>
+<li>&#x652F;&#x6301;&#x673A;&#x578B;&#xFF1A; &#x4E24;&#x8F6E;&#x5E73;&#x8861;&#x8F66;&#xFF0C;&#x4E24;&#x8F6E;&#x5DEE;&#x79FB;&#x52A8;&#x5E73;&#x53F0;&#xFF0C;&#x4E09;&#x8F6E;&#x5168;&#x5411;&#x5E73;&#x53F0;&#xFF0C;&#x56DB;&#x8F6E;&#x5DEE;&#x901F;&#x5E73;&#x53F0;&#xFF0C;&#x56DB;&#x8F6E;&#x9EA6;&#x514B;&#x7EB3;&#x59C6;&#x8F6E;&#x5168;&#x5411;&#x5E73;&#x53F0;&#xFF0C;&#x6570;&#x5B57;&#x8235;&#x673A;&#x4EBA;&#x5F62;&#xFF0C;&#x56FA;&#x5B9A;&#x7FFC;&#xFF0C;&#x56DB;&#x516D;&#x516B;&#x8F74;&#x65CB;&#x7FFC;&#x98DE;&#x884C;&#x5668;&#x7B49;&#x3002;   </li>
+</ul>
+<p>&#x7EC6;&#x8282;&#x770B;&#x4E0B;&#x56FE;,&#x53EF;&#x4EE5;&#x5728;<a href="../Hardware/OpenRE-Board.html">&#x94FE;&#x63A5;</a>&#x4E2D;&#x67E5;&#x770B;&#x66F4;&#x591A;&#x7EC6;&#x8282;.<br><img src="../../images/Hardware/OpenRE_Board/OpenRE_Board_Resource.jpg" alt="OpenRE Board &#x8D44;&#x6E90;&#x56FE;">
+<img src="../../images/Products/Comparison/OpenRE_Board.jpg" alt="OpenRE Board &#x53C2;&#x6570;"></p>
+<p>Turtlebot3&#x4F7F;&#x7528;&#x7684;&#x662F;&#x57FA;&#x4E8E;STM32F7&#x5F00;&#x53D1;&#x7684;&#x5F00;&#x53D1;&#x677F;,MCU&#x4E0D;&#x9519;,&#x677F;&#x5B50;&#x6574;&#x4F53;&#x8D44;&#x6E90;&#x592A;&#x5C11;:</p>
+<p><img src="../../images/Products/Comparison/turtlebot3canshu.jpg" alt="Turtlebot3 &#x53C2;&#x6570;"></p>
+<p>&#x6211;&#x987A;&#x4FBF;&#x628A;Mini&#x7684;&#x53C2;&#x6570;&#x653E;&#x4E0A;&#x53BB;&#x5427;:</p>
+<p><img src="../../images/Hardware/OpenRE_Board/OpenRE_Board_Mini_Resource.jpg" alt="OpenRE Board Mini &#x8D44;&#x6E90;&#x56FE;">
+<img src="../../images/Products/Comparison/mini.jpg" alt="OpenRE Board Mini &#x53C2;&#x6570;"></p>
+<h4 id="&#x8BF4;&#x660E;&#x5206;&#x6790;"><a name="&#x8BF4;&#x660E;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x8BF4;&#x660E;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BF4;&#x660E;&#x5206;&#x6790;</h4>
+<ul>
+<li>Turtlebot2&#x7684;&#x5E95;&#x76D8;&#x63A7;&#x5236;&#x5668;&#x53EF;&#x80FD;&#x6BD4;&#x6211;&#x4EEC;&#x7684;&#x8981;&#x597D;,&#x5DF2;&#x77E5;&#x7684;&#x53EA;&#x6709;&#x9632;&#x649E;&#x4F20;&#x611F;&#x5668;,&#x7EA2;&#x5916;&#x4F20;&#x611F;&#x5668;,&#x9632;&#x8DCC;&#x843D;&#x4F20;&#x611F;&#x5668;,110&#x5EA6;/s&#x5355;&#x8F74;&#x9640;&#x87BA;&#x4EEA;.   </li>
+<li>HandsFree &#x63A7;&#x5236;&#x5668;&#xFF0C;&#x677F;&#x8F7D;&#x8D44;&#x6E90;&#x5341;&#x5206;&#x4E30;&#x5BCC;&#xFF0C;&#x4E0B;&#x6599;&#x5341;&#x8DB3;&#xFF0C;&#x53EF;&#x6EE1;&#x8DB3;&#x5E38;&#x89C1;&#x5F62;&#x6001;&#x673A;&#x5668;&#x4EBA;&#x7814;&#x7A76;&#x9700;&#x6C42;&#xFF0C;&#x540C;&#x65F6;&#x4E0D;&#x60DC;&#x6210;&#x672C;&#xFF0C;&#x5C3D;&#x91CF;&#x9009;&#x62E9;&#x7A33;&#x5B9A;&#x53EF;&#x9760;&#x7684;&#x63A5;&#x53E3;&#x548C;IC&#xFF0C;&#x5149;&#x662F;&#x4E00;&#x4E2A;ADC&#x57FA;&#x51C6;&#x7535;&#x538B;&#x7684;&#x82AF;&#x7247;&#x5C31;&#x5341;&#x51E0;&#x5757;&#x94B1;&#xFF0C;MOLEX&#x63A5;&#x53E3;&#x4E5F;&#x662F;&#x9009;&#x7528;&#x6602;&#x8D35;&#x7684;&#x81EA;&#x9501;&#x63A5;&#x53E3;&#xFF0C;&#x8FD9;&#x4E3B;&#x8981;&#x662F;&#x56E0;&#x4E3A; HandsFree &#x56E2;&#x961F;&#x672C;&#x8EAB;&#x4E5F;&#x662F;&#x4F7F;&#x7528;&#x8FD9;&#x6B3E;&#x63A7;&#x5236;&#x5668;&#x8FDB;&#x884C;&#x7814;&#x7A76;&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5F88;&#x591A;&#x7EC6;&#x8282;&#x65B9;&#x9762;&#x8003;&#x8651;&#x4E5F;&#x662F;&#x4E3A;&#x4E86;&#x6EE1;&#x8DB3;&#x81EA;&#x5DF1;&#x9700;&#x6C42;&#x3002;&#x540C;&#x65F6;HandsFree&#x56E2;&#x961F;&#x4E3A;&#x8BE5;&#x63A7;&#x5236;&#x5668;&#x5F00;&#x53D1;&#x4E86;OpenRE&#x5D4C;&#x5165;&#x5F0F;&#x673A;&#x5668;&#x4EBA;&#x5E93;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x5728;&#x6B64;&#x5E93;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x8FDB;&#x884C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6784;&#x5EFA;&#x3002;&#x800C;&#x4E14;OpenRE&#x662F;&#x8FD8;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x652F;&#x6301;&#x5728;linux&#x73AF;&#x5883;&#x4E0B;&#x5F00;&#x53D1;&#xFF0C;&#x8FD9;&#x5927;&#x5927;&#x65B9;&#x4FBF;&#x4E86;ROS&#x5F00;&#x53D1;&#x8005;&#x548C;&#x4E0D;&#x61C2;&#x5D4C;&#x5165;&#x5F0F;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x5F00;&#x53D1;&#x8005;&#x3002;   </li>
+<li>Turtlebot3&#x7684;MCU&#x6BD4;&#x8F83;&#x9AD8;&#x7AEF;,&#x4F46;&#x662F;&#x5F00;&#x53D1;&#x677F;&#x4E0A;&#x7684;&#x8D44;&#x6E90;&#x5012;&#x662F;&#x6709;&#x9650;,&#x611F;&#x89C9;&#x6709;&#x70B9;&#x6D6A;&#x8D39;&#x4E86;,&#x677F;&#x8F7D;&#x63A5;&#x53E3;&#x4E5F;&#x662F;&#x6392;&#x5E27;&#xFF0C;T&#x63D2;&#xFF0C;&#x5F88;&#x4E0D;&#x4FBF;&#x4E8E;&#x5F00;&#x53D1;&#xFF0E; </li>
+</ul>
+<p><strong>&#x603B;&#x7ED3;</strong>:Turtlebot3&#x677F;&#x8F7D;&#x8D44;&#x6E90;&#x53EA;&#x80FD;&#x8DDF;Mini&#x7A0D;&#x5FAE;&#x6BD4;&#x8F83;&#x4E00;&#x4E0B;,&#x548C;HandsFree&#x7B2C;&#x4E8C;&#x4EE3;&#x4E0A;&#x7684;&#x677F;&#x8F7D;&#x8D44;&#x6E90;&#x5B8C;&#x5168;&#x6CA1;&#x6709;&#x6BD4;&#x8F83;&#x6027;.Kobuki&#x5E95;&#x76D8;&#x63A7;&#x5236;&#x5668;&#x53C2;&#x6570;&#x672A;&#x77E5;,&#x7A0B;&#x5E8F;&#x4E5F;&#x4E0D;&#x662F;&#x5F00;&#x6E90;&#x7684;,&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;,&#x53EA;&#x80FD;&#x8BF4;&#x53EF;&#x80FD;&#x6709;&#x4E00;&#x5B9A;&#x4F18;&#x52BF;.</p>
+<h3 id="&#x7535;&#x6E90;&#x4F9B;&#x7535;&#x65B9;&#x6848;"><a name="&#x7535;&#x6E90;&#x4F9B;&#x7535;&#x65B9;&#x6848;" class="anchor-navigation-ex-anchor" href="#&#x7535;&#x6E90;&#x4F9B;&#x7535;&#x65B9;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3. &#x7535;&#x6E90;&#x4F9B;&#x7535;&#x65B9;&#x6848;</h3>
+<h4 id="&#x53C2;&#x6570;&#x4ECB;&#x7ECD;"><a name="&#x53C2;&#x6570;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#x4ECB;&#x7ECD;</h4>
+<p><a href="../Hardware/Power-Manager.html">Power Manager</a> &#x662F;HandsFree &#x5F00;&#x6E90;&#x9879;&#x76EE;&#x7684;&#x786C;&#x4EF6;&#x6807;&#x51C6;&#x8BBE;&#x8BA1;&#x7684;&#x4E00;&#x6B3E;&#x7535;&#x6E90;&#x5206;&#x914D;&#x677F;&#xFF0C;&#x9644;&#x5E26;&#x591A;&#x8DEF;&#x5F00;&#x5173;&#x548C;&#x591A;&#x79CD;&#x7535;&#x6E90;&#x8F6C;&#x6362;&#x529F;&#x80FD;&#xFF0C;&#x6EE1;&#x8DB3;&#x673A;&#x5668;&#x4EBA;&#x591A;&#x6837;&#x7684;&#x7535;&#x529B;&#x9700;&#x6C42;&#x3002; &#x652F;&#x6301;&#x5E38;&#x7528;&#x7684; TX1&#xFF0C; TK1&#xFF0C; MiniPC&#xFF0C;&#x6811;&#x8393;&#x6D3E;&#xFF0C; Kinect &#xFF0C;HOKUYOU &#x96F7;&#x8FBE;&#x7B49;&#x8BBE;&#x5907;&#x4F9B;&#x7535;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x652F;&#x6301;&#x673A;&#x5668;&#x4EBA;&#x7684;&#x7535;&#x673A;&#x9A71;&#x52A8;&#xFF0C; &#x4E91;&#x53F0;&#x8235;&#x673A;&#xFF0C;&#x673A;&#x68B0;&#x81C2;&#x7B49;&#x7ED3;&#x6784;&#x7684;&#x4F9B;&#x7535;&#xFF0C;&#x8FD8;&#x81EA;&#x5E26;&#x4E00;&#x4E2A;&#x6025;&#x505C;&#x5F00;&#x5173;&#x63A5;&#x53E3;&#x548C; &#x4E00;&#x8DEF;&#x6025;&#x505C;&#x7535;&#x6E90;&#x8F93;&#x51FA;&#x3002;&#x914D;&#x5408;&#x5927;&#x5BB9;&#x91CF;&#x7535;&#x6C60;&#x53EF;&#x4EE5;&#x4E3A;&#x673A;&#x5668;&#x63D0;&#x4F9B;&#x96C6;&#x6210;&#x4F9B;&#x7535;&#x65B9;&#x6848;&#x3002;
+HandsFree&#x79FB;&#x52A8;&#x5E73;&#x53F0;&#x4E0A;&#x91C7;&#x7528;&#x96C6;&#x6210;&#x5316;&#x7684;&#x4F9B;&#x7535;&#x65B9;&#x6848;&#xFF0C;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x7B80;&#x5316;&#x673A;&#x5668;&#x4EBA;&#x5F00;&#x53D1;&#x8005;&#x5BF9;&#x7535;&#x6E90;&#x7684;&#x8BBE;&#x8BA1;&#x540C;&#x65F6;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x8005;&#x8FDB;&#x884C;&#x591A;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x5F00;&#x53D1;&#x3002;&#x5728;&#x7535;&#x6E90;&#x677F;&#x4E0A;&#x6709;&#x6570;&#x91CF;&#x4F17;&#x591A;&#x7684;&#x7535;&#x6E90;&#x63A5;&#x53E3;&#xFF0C;&#x63D0;&#x4F9B;&#x591A;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x7535;&#x538B;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9;&#x5404;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x4F9B;&#x7535;&#x3002;&#x540C;&#x65F6;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x4E0D;&#x540C;&#x63A5;&#x53E3;&#x7684;&#x6240;&#x4EE3;&#x8868;&#x7684;&#x4E0D;&#x540C;&#x7535;&#x538B;&#xFF0C;&#x4FDD;&#x8BC1;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x7535;&#x538B;&#x7684;&#x8BBE;&#x5907;&#x548C;&#x63A5;&#x53E3;&#x4E0D;&#x80FD;&#x987A;&#x5229;&#x8FDE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x4ECE;&#x800C;&#x4FDD;&#x62A4;&#x8BBE;&#x5907;&#x3002;</p>
+<p>&#x6574;&#x4E2A;&#x7535;&#x6E90;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x662F;HandsFree&#x673A;&#x5668;&#x4EBA;&#x7684;&#x4E00;&#x4E2A;&#x4F18;&#x70B9;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;Turtlebot3&#x6240;&#x6CA1;&#x6709;&#x8003;&#x8651;&#x5230;&#x7684;&#xFF0E;</p>
+<p><img src="../../images/Hardware/HandsFree_Power_Manager/Power_Supply.jpg" alt="Power_Supply">
+<img src="../../images/Hardware/HandsFree_Power_Manager/Power_Manager_Resource.jpg" alt="Power_Manager_Resource"></p>
+<p>Turtlebot2&#x79FB;&#x52A8;&#x5E95;&#x76D8;&#x6709;&#x5BF9;&#x5916;&#x7684;&#x63A5;&#x53E3;,&#x5185;&#x7F6E;&#x7535;&#x6C60;,Turtlebot3&#x4E5F;&#x8BBE;&#x7F6E;&#x4E86;&#x5BF9;&#x5916;&#x63A5;&#x53E3;.<br>&#x4E0B;&#x9762;&#x662F;&#x4E8C;&#x8005;&#x7684;&#x5BF9;&#x6BD4;:   </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">Mini</th>
+<th style="text-align:center">Stone</th>
+<th style="text-align:center">Giraffe</th>
+<th style="text-align:center">Turtlebot2</th>
+<th style="text-align:center">Burger</th>
+<th style="text-align:center">Waffle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&#x662F;&#x5426;&#x6DB5;&#x76D6;&#x7535;&#x6E90;&#x7BA1;&#x7406;</td>
+<td style="text-align:center">&#x6709;</td>
+<td style="text-align:center">&#x6709;</td>
+<td style="text-align:center">&#x6709;</td>
+<td style="text-align:center">&#x672A;&#x77E5;</td>
+<td style="text-align:center">&#x65E0;</td>
+<td style="text-align:center">&#x65E0;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x7535;&#x6E90;&#x6269;&#x5C55;</td>
+<td style="text-align:center">12V/3A x 2 , USB5V/2A x 2</td>
+<td style="text-align:center">19V/3A x 3 , 12V/10A x 5 <br> 12V/3A x 4 , USB5V/2A x 2 <br> &#x4E00;&#x8DEF;&#x6025;&#x505C;12V/10A</td>
+<td style="text-align:center">24V/30A x 5 , 19V/3A x 3 <br> 12V/3A x 4 , USB5V/2A x 2  <br> &#x4E00;&#x8DEF;&#x6025;&#x505C;12V/30A</td>
+<td style="text-align:center">12V/5A 12V/1.5A <br> 5V/1A</td>
+<td style="text-align:center">3.3V/0.8A 5V/4A <br> 12V/1A</td>
+<td style="text-align:center">3.3V/0.8A 5V/4A <br> 12V/1A</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x652F;&#x6301;&#x5916;&#x63A5;&#x8BBE;&#x5907;</td>
+<td style="text-align:center">RplidarA1/A2 <br> Hokuyo URG-04L/UTM-30Lx <br> Xtion1/2&#xFF0C;Kinect1/2 <br> TK1&#xFF0C;&#x6811;&#x8393;&#x6D3E;&#xFF0C;&#x5DE5;&#x63A7;&#x673A;</td>
+<td style="text-align:center">Mini&#x652F;&#x6301;&#x7684;&#x8BBE;&#x5907;  <br> + ZED Camera , Dobot&#x673A;&#x68B0;&#x81C2; 1/2</td>
+<td style="text-align:center">Stone&#x652F;&#x6301;&#x7684;&#x8BBE;&#x5907;  <br> + HandsFree&#x673A;&#x68B0;&#x81C2;</td>
+<td style="text-align:center">&#x53C2;&#x8003;&#x4E0A;&#x8FF0;&#x7535;&#x6E90;&#x63A5;&#x53E3;</td>
+<td style="text-align:center">&#x53C2;&#x8003;&#x4E0A;&#x8FF0;&#x7535;&#x6E90;&#x63A5;&#x53E3;</td>
+<td style="text-align:center">&#x53C2;&#x8003;&#x4E0A;&#x8FF0;&#x7535;&#x6E90;&#x63A5;&#x53E3;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x7535;&#x6E90;&#x7535;&#x538B;&#x548C;&#x5BB9;&#x91CF;&#x3000;</td>
+<td style="text-align:center">12v/5200mAh</td>
+<td style="text-align:center">12V 16000mAh</td>
+<td style="text-align:center">24V 20000mAh</td>
+<td style="text-align:center">12v/2200mAh&#x3000;<br>&#x3000;/4400mAh</td>
+<td style="text-align:center">12v/1800mAh</td>
+<td style="text-align:center">12v/1800mAh</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x7EED;&#x822A;&#x65F6;&#x95F4;&#xFF08;h&#xFF09;</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">?</td>
+<td style="text-align:center">2.5</td>
+<td style="text-align:center">2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8BF4;&#x660E;&#x5206;&#x6790;"><a name="&#x8BF4;&#x660E;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x8BF4;&#x660E;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BF4;&#x660E;&#x5206;&#x6790;</h4>
+<p>&#x65E0;&#x8BBA;&#x662F;&#x5728;&#x7535;&#x6C60;&#x7BA1;&#x7406;&#xFF0C;&#x7535;&#x6C60;&#x5BB9;&#x91CF;&#x548C;&#x63A5;&#x53E3;&#x65B9;&#x9762;,HandsFree&#x90FD;&#x76F8;&#x5BF9;&#x66F4;&#x52A0;&#x4F18;&#x79C0;.HandsFree&#x63D0;&#x4F9B;&#x4E86;&#x4E13;&#x95E8;&#x7684;&#x7535;&#x6E90;&#x6A21;&#x5757;,&#x652F;&#x6301;&#x7684;&#x53EF;&#x642D;&#x8F7D;&#x6A21;&#x5757;&#x66F4;&#x591A;&#xFF0C;&#x5E76;&#x4E14;&#x90FD;&#x96C6;&#x6210;&#x5728;&#x7535;&#x6E90;&#x7BA1;&#x7406;&#x677F;&#x4E0A;&#xFF0E;</p>
+<h3 id="&#x7535;&#x673A;&#x9A71;&#x52A8;"><a name="&#x7535;&#x673A;&#x9A71;&#x52A8;" class="anchor-navigation-ex-anchor" href="#&#x7535;&#x673A;&#x9A71;&#x52A8;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.4. &#x7535;&#x673A;,&#x9A71;&#x52A8;</h3>
+<ul>
+<li><a href="../Hardware/Module.html">HandsFree Motor Drive V2</a> &#x662F;HandsFree Team&#x6839;&#x636E;Hands Free&#x5F00;&#x6E90;&#x9879;&#x76EE;&#x7684;&#x6807;&#x51C6;&#x5F00;&#x53D1;&#x7684;&#x4E00;&#x6B3E;&#x7535;&#x673A;&#x9A71;&#x52A8;&#x5668;&#xFF0C;&#x662F;HandsFree&#x5F00;&#x53D1;&#x7684;&#x673A;&#x5668;&#x4EBA;Stone&#x7684;&#x786C;&#x4EF6;&#x7684;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#x4E4B;&#x4E00;&#x3002;&#x6BCF;&#x5757;&#x9A71;&#x52A8;&#x677F;&#x4F7F;&#x7528;&#x4E24;&#x5757;BTS7970&#x82AF;&#x7247;&#xFF0C;&#x53EF;&#x4EE5;&#x9A71;&#x52A8;&#x4E00;&#x4E2A;&#x7535;&#x673A;&#xFF0C;&#x4FDD;&#x8BC1;&#x8DB3;&#x591F;&#x5927;&#x7684;&#x9A71;&#x52A8;&#x80FD;&#x529B;&#x3002;&#x540C;&#x65F6;&#x80FD;&#x591F;&#x5C06;&#x7535;&#x6E90;&#x8F6C;&#x63A5;&#x7ED9;&#x5176;&#x4ED6;&#x9A71;&#x52A8;&#xFF0C;&#x6781;&#x5927;&#x7684;&#x51CF;&#x5C11;&#x9A71;&#x52A8;&#x7535;&#x6E90;&#x7EBF;&#x8FDE;&#x63A5;&#x7684;&#x590D;&#x6742;&#x7A0B;&#x5EA6;&#x3002;   </li>
+<li>Turtlebot2&#x9A71;&#x52A8;&#x7535;&#x673A;&#x5747;&#x672A;&#x77E5;.Turtlebot3&#x4F7F;&#x7528;<a href="http://en.robotis.com/index/product.php?cate_code=10121110" target="_blank">Dynamixel X series</a>;Burger&#x7535;&#x673A;&#x4E3A;DYNAMIXEL (XL430-W250-T),Waffle&#x7535;&#x673A;&#x4E3A;DYNAMIXEL (XM430-W210-T).   </li>
+</ul>
+<p>&#x611F;&#x89C9;&#x8FD9;&#x65B9;&#x9762;&#x534A;&#x65A4;&#x516B;&#x4E24;&#x5427;.</p>
+<h3 id="&#x4E0B;&#x4F4D;&#x673A;&#x8F6F;&#x4EF6;"><a name="&#x4E0B;&#x4F4D;&#x673A;&#x8F6F;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4E0B;&#x4F4D;&#x673A;&#x8F6F;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.5. &#x4E0B;&#x4F4D;&#x673A;&#x8F6F;&#x4EF6;</h3>
+<p>Turtlebot2&#x4E0D;&#x662F;&#x5F00;&#x6E90;&#x7684;,&#x6240;&#x4EE5;&#x6CA1;&#x6709;&#x7B2C;&#x4E8C;&#x4EE3;&#x7684;&#x8D44;&#x6599;,&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x7B2C;&#x4E8C;&#x4EE3;&#x5E95;&#x5C42;&#x662F;&#x4E0D;&#x652F;&#x6301;&#x4E8C;&#x6B21;&#x5F00;&#x53D1;&#x7684;.<br>Turtlebot3&#x4E0B;&#x4F4D;&#x673A;&#x8F6F;&#x4EF6;&#x4E3A;<a href="http://turtlebot3.robotis.com/en/latest/opencr_software.html#" target="_blank">OpenCR</a>,&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x4E3A;Arduino&#x7684;IDE. &#x5177;&#x4F53;&#x4EE3;&#x7801;&#x6CA1;&#x6709;&#x7814;&#x8BFB;,&#x4E0D;&#x8FC7;&#x8003;&#x8651;&#x5230;&#x4E3B;&#x63A7;&#x677F;&#x4E0A;&#x8D44;&#x6E90;&#x8F83;&#x5C11;,&#x5C31;&#x7B97;&#x8FDB;&#x884C;&#x4E8C;&#x6B21;&#x5F00;&#x53D1;&#x4E5F;&#x5F88;&#x53D7;&#x9650;&#x5236;&#xFF0C;Arduino&#x7684;IDE&#x76F8;&#x4FE1;&#x7528;&#x8FC7;&#x7684;&#x4EBA;&#x4E5F;&#x8BE5;&#x5410;&#x69FD;&#x4E86;&#xFF0E;
+HandsFree&#x4E0B;&#x4F4D;&#x673A;&#x8F6F;&#x4EF6;&#x4E3A;<a href="../OpenRE/">OpenRE</a>.
+OpenRE&#x5168;&#x79F0;Open Source Robot Embedded Library&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x4E3A;&#x673A;&#x5668;&#x4EBA;&#x5199;&#x7684;&#x3001;&#x57FA;&#x4E8E;STM32&#x7CFB;&#x5217;&#x5FAE;&#x5904;&#x7406;&#x5668;&#x7684;&#x5D4C;&#x5165;&#x5F0F;&#x5F00;&#x6E90;&#x5E93;&#x3002;&#x7ECF;&#x8FC7;&#x4E0D;&#x65AD;&#x4F18;&#x5316;&#xFF0C;&#x5F00;&#x6E90;&#x5E93;&#x53D8;&#x5F97;&#x9C81;&#x68D2;&#x548C;&#x901A;&#x7528;&#xFF0C;&#x4ECE;&#x800C;&#x72EC;&#x7ACB;&#x4E8E;&#x5E73;&#x53F0;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x4E3A;&#x673A;&#x5668;&#x4EBA;&#x800C;&#x751F;&#x7684;&#x4E00;&#x4E2A;&#x5D4C;&#x5165;&#x5F0F;&#x5E93;&#x3002;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x4E3A;&#x673A;&#x5668;&#x4EBA;&#x670D;&#x52A1;&#x7684;&#x5D4C;&#x5165;&#x5F0F;&#x8DE8;&#x5E73;&#x53F0;&#x8F6F;&#x4EF6;&#x6846;&#x67B6;&#xFF0C;&#x6DB5;&#x76D6;&#x5E95;&#x5C42;&#x8BBE;&#x5907;&#x9A71;&#x52A8;&#xFF0C;&#x7B97;&#x6CD5;&#x5E93;&#xFF0C;&#x901A;&#x4FE1;&#x4E0E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7EC4;&#x4EF6;&#x7B49;&#xFF0C;&#x4E3B;&#x8981;&#x6DB5;&#x76D6;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<p>OpenRE&#x7684;&#x4EE3;&#x7801;&#x7531;&#x5E95;&#x5C42;&#x5230;&#x4E0A;&#x5C42;&#x4E3B;&#x8981;&#x5206;&#x4E3A;<strong>&#x5E95;&#x5C42;&#x63A5;&#x53E3;&#x51FD;&#x6570;&#x5E93;</strong>&#x3001;<strong>&#x5E38;&#x7528;&#x5916;&#x8BBE;&#x9A71;&#x52A8;&#x5E93;</strong>&#x3001;<strong>OS&#x5E93;</strong>&#x3001;<strong>&#x673A;&#x5668;&#x4EBA;&#x5BF9;&#x8C61;&#x7684;&#x62BD;&#x8C61;&#x5E93;</strong>&#x3001;<strong>&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x7684;&#x79FB;&#x690D;</strong>&#x7B49;&#x3002;  </p>
+<ul>
+<li>&#x5E95;&#x5C42;&#x63A5;&#x53E3;&#x51FD;&#x6570;&#x5E93;&#xFF1A;&#x5728;&#x5B98;&#x65B9;&#x56FA;&#x4EF6;&#x5E93;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x5C06;&#x5BF9;GPIO&#x3001;&#x5B9A;&#x65F6;&#x5668;&#x3001;&#x7F16;&#x7801;&#x5668;&#x3001;USART&#x3001;CAN&#x3001;IIC&#x3001;SPI&#x3001;ADC&#x548C;PWM&#x7B49;&#x5E95;&#x5C42;&#x8D44;&#x6E90;&#x7684;&#x64CD;&#x4F5C;&#x8FDB;&#x4E00;&#x6B65;&#x8FDB;&#x884C;&#x5C01;&#x88C5;&#x3002;</li>
+<li>&#x5E38;&#x7528;&#x5916;&#x8BBE;&#x548C;&#x4F20;&#x611F;&#x5668;&#x9A71;&#x52A8;&#x5E93;&#xFF1A;&#x5BF9;&#x5E38;&#x7528;&#x7684;&#x5916;&#x8BBE;&#x63D0;&#x4F9B;&#x9A71;&#x52A8;&#xFF0C;&#x4F8B;&#x5982;&#x7535;&#x673A;&#x63A7;&#x5236;&#x3001;&#x8235;&#x673A;&#x63A7;&#x5236;&#x3001;LCD&#x5C4F;&#x5E55;&#x9A71;&#x52A8;&#x3001;&#x822A;&#x6A21;&#x9065;&#x63A7;&#x5668;&#x7684;&#x89E3;&#x7801;&#xFF0C;&#x52A0;&#x901F;&#x8BA1;&#xFF0C;&#x9640;&#x87BA;&#x4EEA;&#xFF0C;&#x78C1;&#x529B;&#x8BA1;&#xFF0C;&#x8D85;&#x58F0;&#xFF0C;&#x7EA2;&#x5916;&#xFF0C;GPS&#x89E3;&#x7801;&#xFF0C;EEPROM&#xFF0C;SD&#x5361;&#x9A71;&#x52A8;&#x7B49;&#x3002;</li>
+<li>OS&#x5E93;&#xFF1A;&#x5F00;&#x53D1;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5305;&#x542B;&#x88F8;&#x8DD1;&#x7A0B;&#x5E8F;&#x7248;&#x672C;&#x548C;&#x6709;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#xFF0C;OpenRE&#x79FB;&#x690D;&#x4E86;&#x5B9E;&#x65F6;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF08; RTOS&#xFF09;&#xFF0C;&#x56FE;&#x5F62;&#x5E93;&#xFF08;GUI&#xFF09;&#xFF0C;&#x7F51;&#x7EDC;&#x534F;&#x8BAE;&#xFF08;LWIP&#xFF09;&#xFF0C; USB &#x534F;&#x8BAE;&#xFF0C;&#x4F7F;&#x7528;&#x8005;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x6A21;&#x677F;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#xFF0C;&#x7701;&#x53BB;&#x4E86;&#x79FB;&#x690D;&#x8FC7;&#x7A0B;&#x7684;&#x7E41;&#x7410;&#x64CD;&#x4F5C;&#xFF0E;</li>
+<li>&#x6A21;&#x578B;&#x548C;&#x7B97;&#x6CD5;&#x5E93;&#xFF1A;&#x5BF9;&#x79FB;&#x52A8;&#x5E95;&#x76D8;&#x6A21;&#x578B;&#x7684;&#x62BD;&#x8C61;&#xFF0C;&#x5305;&#x62EC;&#x5DEE;&#x5206;&#x5E95;&#x76D8;&#x3001;4&#x8F6E;&#x9EA6;&#x8F6E;&#x5E95;&#x76D8;&#x548C;3&#x8F6E;&#x5168;&#x5411;&#x8F6E;&#x5E95;&#x76D8;&#x7684;&#x8FD0;&#x52A2;&#x5B66;&#x6A21;&#x578B;&#xFF0C;&#x673A;&#x5668;&#x4EBA;&#x8FD0;&#x52A8;&#x5750;&#x6807;&#x53D8;&#x6362;&#xFF0C;&#x5361;&#x5C14;&#x66FC;&#x6EE4;&#x6CE2;&#xFF0C;&#x56DB;&#x5143;&#x6570;&#xFF0C;&#x77E9;&#x9635;&#x8FD0;&#x7B97;&#xFF0C;PID&#x63A7;&#x5236;&#x5305;&#x7B49;</li>
+<li>&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x7684;&#x79FB;&#x690D;&#xFF1A;&#x79FB;&#x690D;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#xFF0C;&#x5305;&#x62EC;Dobot&#x673A;&#x68B0;&#x81C2;&#x5E93;&#xFF0C;Eigen3&#x548C;Matrix&#x77E9;&#x9635;&#x5E93;&#x3002;    </li>
+</ul>
+<p>OpenRE&#x652F;&#x6301;Windows &#x548C; Linux&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF0C;&#x65B9;&#x4FBF;&#x4E86;&#x673A;&#x5668;&#x4EBA;&#x5F00;&#x53D1;&#x4EBA;&#x5BF9;&#x7CFB;&#x7EDF;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x652F;&#x6301;Linux&#x73AF;&#x5883;&#x4E0B;&#x7684;makefile + QTCreator + armgcc&#x6765;&#x8FDB;&#x884C;&#x5F00;&#x53D1;</p>
+<ul>
+<li>&#x83B7;&#x53D6;OpenRE&#x6E90;&#x7801;&#xFF1A; <a href="https://github.com/HANDS-FREE/OpenRE" target="_blank">OpenRE Github</a> </li>
+<li>OpenRE&#x5F00;&#x53D1;&#x6559;&#x7A0B;&#xFF1A;<a href="../OpenRE/">OpenRE Tutorial</a></li>
+</ul>
+<h3 id="ros&#x548C;&#x4E0A;&#x4F4D;&#x673A;"><a name="ros&#x548C;&#x4E0A;&#x4F4D;&#x673A;" class="anchor-navigation-ex-anchor" href="#ros&#x548C;&#x4E0A;&#x4F4D;&#x673A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.6. ROS&#x548C;&#x4E0A;&#x4F4D;&#x673A;</h3>
+<p><a href="http://wiki.ros.org/" target="_blank">ROS</a>(Robot Operating System)&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5E73;&#x53F0;,&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x63D0;&#x4F9B;&#x5404;&#x79CD;&#x5E93;&#x6587;&#x4EF6;&#x5E2E;&#x52A9;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x521B;&#x5EFA;&#x673A;&#x5668;&#x4EBA;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x786C;&#x4EF6;&#x62BD;&#x8C61;&#x5C42;&#x3001;&#x8BBE;&#x5907;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x3001;&#x5E93;&#x3001;&#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;&#x3001;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x3001;&#x5305;&#x7BA1;&#x7406;&#xFF0C;&#x8FD8;&#x6709;&#x66F4;&#x591A;&#x5176;&#x4ED6;&#x7684;&#x3002;<br>Turtlebot&#x548C;HandsFree&#x4E0A;&#x5C42;&#x90FD;&#x662F;&#x57FA;&#x4E8E;ROS&#x8FDB;&#x884C;&#x5F00;&#x53D1;,&#x7531;&#x4E8E;ROS&#x7684;&#x5F00;&#x6E90;&#x7684;&#x6027;&#x8D28;,&#x5728;&#x4E0A;&#x4F4D;&#x673A;&#x8F6F;&#x4EF6;&#x65B9;&#x9762;&#x4E24;&#x7C7B;&#x673A;&#x5668;&#x4EBA;&#x5DEE;&#x522B;&#x4E0D;&#x5927;,&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ROS&#x5E93;&#x8FDB;&#x884C;&#x5F00;&#x53D1;,Turtlebot&#x7684;Demo&#x548C;HandsFree&#x7684;Demo&#x90FD;&#x662F;&#x5927;&#x540C;&#x5C0F;&#x5F02;,&#x5927;&#x90E8;&#x5206;&#x7A0B;&#x5E8F;&#x4E5F;&#x662F;&#x76F8;&#x901A;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x652F;&#x6301;.<br>&#x6240;&#x4EE5;,&#x5728;&#x8FD9;&#x65B9;&#x9762;,&#x4E8C;&#x8005;&#x6CA1;&#x533A;&#x522B;.   </p>
+<p> <strong>&#x603B;&#x7ED3;</strong>:&#x3000;Turtlebot&#x7B2C;&#x4E09;&#x4EE3;&#x5F00;&#x53D1;&#x53D7;&#x9650;&#x5236;&#x5F88;&#x591A;,&#x603B;&#x4F53;&#x6765;&#x8BF4;&#x4E0D;&#x5982;HandsFree&#x7684;&#x5F00;&#x6E90;&#x7684;&#x4E0B;&#x4F4D;&#x673A;&#x8F6F;&#x4EF6;.</p>
+<h2 id="&#x9500;&#x552E;&#x53CA;&#x670D;&#x52A1;&#x5BF9;&#x6BD4;"><a name="&#x9500;&#x552E;&#x53CA;&#x670D;&#x52A1;&#x5BF9;&#x6BD4;" class="anchor-navigation-ex-anchor" href="#&#x9500;&#x552E;&#x53CA;&#x670D;&#x52A1;&#x5BF9;&#x6BD4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x9500;&#x552E;&#x53CA;&#x670D;&#x52A1;&#x5BF9;&#x6BD4;</h2>
+<h3 id="&#x4EF7;&#x683C;"><a name="&#x4EF7;&#x683C;" class="anchor-navigation-ex-anchor" href="#&#x4EF7;&#x683C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. &#x4EF7;&#x683C;</h3>
+<p>&#x4EF7;&#x683C;&#x65B9;&#x9762;&#x4E5F;&#x662F;&#x78BE;&#x538B;&#x8D8B;&#x52BF;,HandsFree&#x4E09;&#x6B3E;&#x673A;&#x5668;&#x4EBA;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7FA4;&#x4F53;,&#x4EF7;&#x683C;&#x533A;&#x95F4;&#x5728;2000-10000&#x4E0D;&#x6B62;,&#x5957;&#x9910;&#x9009;&#x62E9;&#x5F88;&#x4EBA;&#x6027;&#x5316;.Turtlebot&#x7CFB;&#x5217;,&#x7B2C;&#x4E09;&#x4EE3;&#x4EF7;&#x683C;&#x5728;6500&#x5DE6;&#x53F3;,&#x7B2C;&#x4E8C;&#x4EE3;&#x53EA;&#x8981;&#x5149;&#x662F;&#x5E95;&#x76D8;&#x5C31;4500,&#x66F4;&#x4E0D;&#x8981;&#x8BF4;&#x4E0A;&#x9762;&#x8981;&#x67B6;&#x8BBE;kinect&#x548C;&#x7B14;&#x8BB0;&#x672C;&#x4E86;.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">Mini</th>
+<th style="text-align:center">Stone</th>
+<th style="text-align:center">Giraffe</th>
+<th style="text-align:center">Turtlebot2</th>
+<th style="text-align:center">Burger</th>
+<th style="text-align:center">Waffle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&#x4EF7;&#x683C;(RMB)</td>
+<td style="text-align:center">1998/3598<br>4398/5398</td>
+<td style="text-align:center">5998/8598/10398<br>12398/15398</td>
+<td style="text-align:center">12998/20998<br>24598/66998</td>
+<td style="text-align:center">11399</td>
+<td style="text-align:center">5500</td>
+<td style="text-align:center">15500</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8BF4;&#x660E;: &#x4EF7;&#x683C;&#x4E00;&#x680F;&#x683C;&#x5F0F;&#x4E3A;:&#x57FA;&#x7840;&#x7248;/&#x5BFC;&#x822A;&#x7248;/&#x89C6;&#x89C9;&#x5F00;&#x53D1;&#x7248;</p>
+<h3 id="&#x6559;&#x7A0B;"><a name="&#x6559;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x6559;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. &#x6559;&#x7A0B;</h3>
+<p>&#x56E0;&#x4E3A;&#x4E24;&#x5BB6;&#x673A;&#x5668;&#x4EBA;&#x90FD;&#x662F;&#x57FA;&#x4E8E;ROS,&#x56FD;&#x5185;&#x4E5F;&#x6709;&#x5728;&#x63A8;&#x5E7F;ROS&#x7684;&#x5404;&#x79CD;&#x7EC4;&#x7EC7;,&#x6240;&#x4EE5;&#x5173;&#x4E8E;ROS&#x65B9;&#x9762;&#x7684;&#x8D44;&#x6599;&#x90FD;&#x53EF;&#x4EE5;&#x627E;&#x5230;.TurtleBot&#x7CFB;&#x5217;&#x548C;HandsFree&#x7CFB;&#x5217;&#x90FD;&#x63D0;&#x4F9B;&#x8F83;&#x4E3A;&#x5B8C;&#x6574;&#x7684;&#x5B66;&#x4E60;&#x6307;&#x5BFC;&#x548C;&#x57F9;&#x8BAD;&#xFF0C;&#x5728;GitHub&#x4E0A;&#x63D0;&#x4F9B;&#x5F00;&#x6E90;&#x7684;&#x4EE3;&#x7801;&#x4F9B;&#x5BA2;&#x6237;&#x5B66;&#x4E60;&#x4F7F;&#x7528;&#xFF0C;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x8BA8;&#x8BBA;&#x793E;&#x533A;&#x4E3A;&#x5E7F;&#x5927;&#x673A;&#x5668;&#x4EBA;&#x7231;&#x597D;&#x8005;&#x63D0;&#x4F9B;&#x8BA8;&#x8BBA;&#x5206;&#x4EAB;&#xFF0C;&#x78B0;&#x649E;&#x601D;&#x7EF4;&#x7684;&#x5E73;&#x53F0;&#x3002;   </p>
+<ul>
+<li>Turtlebot&#x7CFB;&#x5217;&#x7684;&#x5176;&#x4ED6;&#x8D44;&#x6599;&#x90FD;&#x4EE5;Wiki&#x7684;&#x5F62;&#x5F0F;&#x7ED9;&#x51FA;,&#x5927;&#x90E8;&#x5206;&#x8D44;&#x6599;&#x90FD;&#x53EF;&#x4EE5;&#x5728;<a href="http://www.turtlebot.com/" target="_blank">&#x5B98;&#x7F51;</a>&#x627E;&#x5230;.</li>
+<li>HandsFree&#x7684;&#x8D44;&#x6599;&#x4E5F;&#x662F;&#x4F9D;&#x9760;gitbook&#x6574;&#x7406;&#x5F62;&#x6210;&#x7684;<a href="http://wiki.handsfree.org.cn/" target="_blank">Wiki</a>,&#x6240;&#x6709;&#x8D44;&#x6599;&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x91CC;&#x9762;&#x627E;&#x5230;.&#x4E0D;&#x4EC5;&#x5982;&#x6B64;&#xFF0C;HandsFree&#x5EFA;&#x8BBE;&#x6709;&#x4EA4;&#x6D41;&#x793E;&#x533A;,&#x793E;&#x533A;&#x4EA4;&#x6D41;&#x7FA4;: 521037187 (Hands Free Community) ,&#x7FA4;&#x5185;&#x5927;&#x90E8;&#x5206;&#x90FD;&#x662F;HandsFree&#x4F7F;&#x7528;&#x8005;&#x53CA;&#x5F00;&#x53D1;&#x8005;,&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x5B66;&#x4E60;&#x89E3;&#x60D1;.</li>
+</ul>
+<h3 id="&#x5176;&#x4ED6;"><a name="&#x5176;&#x4ED6;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. &#x5176;&#x4ED6;</h3>
+<p>HandsFree&#x76F8;&#x5BF9;Turtlebot&#x6709;&#x5929;&#x7136;&#x7684;&#x4F18;&#x52BF;,&#x4E00;&#x5835;&#x65E0;&#x5F62;&#x7684;&#x5899;.&#x6211;&#x4EEC;&#x4EA7;&#x54C1;&#x5982;&#x679C;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;,&#x793E;&#x533A;&#x63D0;&#x95EE;,&#x6216;&#x8005;&#x76F4;&#x63A5;&#x627E;&#x5230;&#x6211;&#x4EEC;&#x516C;&#x53F8;&#x5F88;&#x65B9;&#x4FBF;.</p>
+<ul>
+<li>&#x6709;&#x4E8C;&#x5341;&#x591A;&#x6240;&#x5927;&#x5B66;&#x7684;&#x5B9E;&#x9A8C;&#x5BA4;,&#x4F7F;&#x7528;&#x4E86;HandsFree&#x5E73;&#x53F0;&#x4F5C;&#x4E3A;&#x7814;&#x53D1;&#x5E73;&#x53F0;   </li>
+<li>&#x5341;&#x51E0;&#x4E2A;&#x521B;&#x4E1A;&#x516C;&#x53F8;&#x4F7F;&#x7528;&#x4E86;HandsFree&#x4F5C;&#x4E3A;&#x539F;&#x578B;&#x673A;   </li>
+<li>&#x8F6F;&#x4EF6;&#x6846;&#x67B6;&#x66F4;&#x662F;&#x88AB;&#x4F17;&#x591A;&#x673A;&#x5668;&#x4EBA;&#x7231;&#x597D;&#x8005;&#x6240;&#x4F7F;&#x7528;   </li>
+</ul>
+<p>HandsFree&#x3000;&#x642D;&#x5EFA;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x7F51;&#x7AD9;,&#x4EA4;&#x6D41;&#x793E;&#x533A;,&#x6DD8;&#x5B9D;&#x5E97;,Github&#x7B49;,&#x5E0C;&#x671B;&#x80FD;&#x5E2E;&#x52A9;&#x66F4;&#x591A;&#x673A;&#x5668;&#x4EBA;&#x5F00;&#x53D1;&#x8005;.</p>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x603B;&#x7ED3;</h2>
+<ul>
+<li>&#x786C;&#x4EF6;&#x65B9;&#x9762;,&#x7531;&#x4E8E;Turtlebot2&#x7684;&#x4E0D;&#x5F00;&#x653E;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;,&#x4F46;&#x662F;&#x901A;&#x8FC7;&#x4E0E;Turtlebot3&#x7684;&#x5BF9;&#x6BD4;,&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x8D44;&#x672C;&#x4E3B;&#x4E49;&#x90FD;&#x662F;&#x7EB8;&#x8001;&#x864E;.&#x4E0D;&#x80FD;&#x8BF4;&#x5168;&#x9762;&#x78BE;&#x538B;Turtlebot3,&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x8BF4;&#x5360;&#x636E;&#x5F88;&#x5927;&#x7684;&#x4F18;&#x52BF;&#x4E86;.   </li>
+<li>&#x8F6F;&#x4EF6;&#x65B9;&#x9762;,&#x540C;&#x662F;&#x652F;&#x6301;ROS&#x5F00;&#x53D1;&#x7684;&#x673A;&#x5668;&#x4EBA;,ROS&#x7684;&#x9A71;&#x52A8;&#x7B97;&#x6CD5;&#x4E00;&#x7C7B;&#x7684;&#x53C8;&#x90FD;&#x662F;&#x5F00;&#x6E90;&#x7684;,&#x8FD9;&#x65B9;&#x9762;&#x5DEE;&#x522B;&#x4E0D;&#x5927;,&#x4F46;&#x662F;Handsfree&#x4ECD;&#x7136;&#x5360;&#x636E;&#x4E86;&#x9AD8;&#x5730;,HandsFree&#x7684;OpenRE&#x4EE3;&#x7801;&#x66F4;&#x52A0;&#x4E13;&#x4E1A;&#xFF0C;&#x89E3;&#x6790;&#x8BE6;&#x7EC6;,&#x652F;&#x6301;&#x7684;&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x66F4;&#x591A;,&#x652F;&#x6301;Linux&#x73AF;&#x5883;&#x4E0B;&#x7684;makefile + QTCreator + armgcc&#x6765;&#x8FDB;&#x884C;&#x5F00;&#x53D1;,&#x66F4;&#x5730;&#x6EE1;&#x8DB3;&#x4E86;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x9700;&#x6C42;.   </li>
+<li>&#x9500;&#x552E;&#x65B9;&#x9762;,&#x6211;&#x4EEC;&#x642D;&#x914D;&#x7684;&#x5957;&#x9910;&#x66F4;&#x52A0;&#x4EBA;&#x6027;&#x5316;,&#x8D28;&#x91CF;&#x9AD8;,&#x4EF7;&#x94B1;&#x4F4E;.&#x670D;&#x52A1;&#x4E0E;Turtlebot&#x4E0D;&#x76F8;&#x4E0A;&#x4E0B;,&#x6211;&#x4EEC;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x5927;&#x5BB6;&#x4E92;&#x76F8;&#x4EA4;&#x6D41;&#x7684;&#x793E;&#x533A;,&#x4EE5;&#x53CA;&#x53CA;&#x65F6;&#x65B9;&#x4FBF;&#x7684;&#x552E;&#x540E;.   </li>
+</ul>
+<p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;,HandsFree&#x76F8;&#x5BF9;Turtlebot3,&#x5177;&#x5907;&#x4E86;&#x8089;&#x773C;&#x53EF;&#x89C1;&#x7684;&#x4F18;&#x52BF;&#xFF0E;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; &#x6DF1;&#x5733;&#x671D;&#x95FB;&#x9053;&#x667A;&#x80FD;&#x4FE1;&#x606F;&#x79D1;&#x6280;&#x6709;&#x9650;&#x516C;&#x53F8; 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2018-06-02 16:12:07
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="RTMapper.html" class="navigation navigation-prev " aria-label="Previous page: RTMapper无人机系统">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Tutorial/" class="navigation navigation-next " aria-label="Next page: 初级教程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"和Turtlebot的对比","level":"1.4.5","depth":2,"next":{"title":"初级教程","level":"1.5","depth":1,"path":"docs/Tutorial/README.md","ref":"docs/Tutorial/README.md","articles":[{"title":"准备开始","level":"1.5.1","depth":2,"path":"docs/Tutorial/1.1-Getting-Started.md","ref":"docs/Tutorial/1.1-Getting-Started.md","articles":[]},{"title":"远程遥控机器人","level":"1.5.2","depth":2,"path":"docs/Tutorial/1.2-First-Experiment.md","ref":"docs/Tutorial/1.2-First-Experiment.md","articles":[]},{"title":"雷达建图","level":"1.5.3","depth":2,"path":"docs/Tutorial/2.1-Mapping.md","ref":"docs/Tutorial/2.1-Mapping.md","articles":[]},{"title":"自主导航","level":"1.5.4","depth":2,"path":"docs/Tutorial/2.1-Navigation.md","ref":"docs/Tutorial/2.1-Navigation.md","articles":[]},{"title":"RGBD摄像头实验","level":"1.5.5","depth":2,"path":"docs/Tutorial/2.2-RGBD-Test.md","ref":"docs/Tutorial/2.2-RGBD-Test.md","articles":[]},{"title":"视觉实验","level":"1.5.6","depth":2,"path":"docs/Tutorial/2.3-Vision-Test.md","ref":"docs/Tutorial/2.3-Vision-Test.md","articles":[]},{"title":"云台跟踪实验","level":"1.5.7","depth":2,"path":"docs/Tutorial/2.4-Head-Tracking.md","ref":"docs/Tutorial/2.4-Head-Tracking.md","articles":[]},{"title":"仿真实验","level":"1.5.8","depth":2,"path":"docs/Tutorial/3.1-Simulation.md","ref":"docs/Tutorial/3.1-Simulation.md","articles":[]},{"title":"RGBDSLAM v2实验","level":"1.5.9","depth":2,"path":"docs/Tutorial/RGBDSLAMV2.md","ref":"docs/Tutorial/RGBDSLAMV2.md","articles":[]},{"title":"ORB_SLAM2 实验","level":"1.5.10","depth":2,"path":"docs/Tutorial/ORBSLAM2.md","ref":"docs/Tutorial/ORBSLAM2.md","articles":[]}]},"previous":{"title":"RTMapper无人机系统","level":"1.4.4","depth":2,"path":"docs/Products/RTMapper.md","ref":"docs/Products/RTMapper.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","-sharing","search-plus@^0.0.11","simple-page-toc@^0.1.1","github@^2.0.0","github-buttons@2.1.0","edit-link@^2.0.2","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","advanced-emoji@^0.2.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid@^0.0.9","tbfed-pagefooter@^0.0.1","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","-donate@^1.0.2","local-video@^1.0.1","sitemap-general@^0.1.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0","mermaid","flow","latex-codecogs"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 深圳朝闻道智能信息科技有限公司 2018","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"latex-codecogs":{"type":"gif"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"include-csv":{},"disqus":{"useIdentifier":false,"shortName":"HandsFree"},"emphasize":{},"ace":{},"github":{"url":"https://github.com/HANDS-FREE/handsfree_wiki"},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"mermaid":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"flow":{"line-color":"red"},"graph":{},"donate":{"wechat":"/resource/weixin.png","alipay":"/resource/alipay.png","title":"","button":"赏","alipayText":"支付宝打赏","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://www.hfreetech.org"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"musicxml":{},"sectionx":{"tag":"b"},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"prism-themes":{},"alerts":{},"github-buttons":{"repo":"HANDS-FREE/handsfree_wiki","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"ff100361cdce95dd4c8fb96b4009f7bc"},"expandable-chapters-small":{},"local-video":{},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"weibo":true,"facebook":false,"twitter":false,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"edit-link":{"label":"Edit This Page","base":"https://github.com/HANDS-FREE/handsfree_wiki/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"Robocoder","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HandsFree Tutorial","language":"zh-hans","output.name":"site","links":{"sidebar":{"官方网站":"http://www.zonewander.com"}},"gitbook":"3.2.2","description":"HandsFree 机器人开源项目学习教程"},"file":{"path":"docs/Products/Comparison.md","mtime":"2018-06-02T08:12:07.587Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-09-13T03:49:29.506Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
